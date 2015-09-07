@@ -6,7 +6,7 @@ The ZIF file structure is such that it does not require an image server to deliv
 
 The format was developed in 2015 by [**Objective Pathology Services Ltd**.](http://www.objectivepathology.com) and maintained in conjunction with [**Zoomify Inc**.](http://zoomify.com)
 
-## Specification
+### Specification
 Essentially, ZIF is a subspecification of TIFF, with minor departures from the TIFF 6.0 specification to enable serverless delivery of images to modern web browsers and other client applications.
 
 - ZIF files must be tiled TIFFs
@@ -32,19 +32,22 @@ Essentially, ZIF is a subspecification of TIFF, with minor departures from the T
 
 
 ## Image Viewer
+TBD
 
 ## Client Libraries
+Client libraries will eventually be provided here for
 
-### JavaScript
-### CoffeeScript
-### Python
-### Ruby
-### PHP
-### C
-### C++
-### C# .NET
-### D
-### Go
-### Rust
-### Julia
-### Erlang
+* JavaScript
+* CoffeeScript
+* Python
+* Ruby
+* PHP
+* C
+* C++
+* C# .NET
+* D
+* Go
+* Rust
+* Julia
+* Erlang
+
