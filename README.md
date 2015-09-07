@@ -32,11 +32,45 @@ Essentially, ZIF is a subspecification of TIFF, with minor departures from the T
 - Tag 51160: ZIF annotations
 
 
-### Image Viewer
-TBD
+### Image Viewers
+In future, open-source browser-based image viewers will be available here for collaborative development:
+
+* Full viewer in JavaScript/CoffeeScript, with S3.js
+* Leaflet plugin
+* Google Maps plugin
+* OpenLayers 3 plugin
+* Modest Maps plugin
+* Polymaps plugin
+
+In addition to raw ZIF byte-served access, server APIs will include:
+
+* REST
+* JSON
+* Protocol Buffers
+* XML-RPC
+* MessagePack-RPC
+* SOAP
+* Thrift
+* [IIIF](http://iiif.io)
+
+Serialization formats:
+
+* JSON
+* MessagePack
+* Gobs (in Go)
+* BSON
+* Google Protocol Buffers
+* Thrift
+* HDF5
+* XML
+* Avro
+* Base64/JSON – strings and ArrayBuffers
+* don’t forget data can be delivered gzipped…
+* HmlHttpRequest2 supports ArrayBuffers, Blobs, and FormData
+
 
 ### Client Libraries
-Client libraries will eventually be provided here for
+Client libraries will eventually be provided here for:
 
 * JavaScript
 * CoffeeScript
@@ -51,4 +85,3 @@ Client libraries will eventually be provided here for
 * Rust
 * Julia
 * Erlang
-
