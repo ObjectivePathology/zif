@@ -26,7 +26,7 @@ Essentially, ZIF is a subspecification of TIFF, with minor departures from the T
 - JPEG-XR tiles need a tile compression code in tag 259...34934
 - JPEG tiled ZIFs are very close to true TIFF 6.0 files, except for edge tile sizes; most readers are nevertheless fully able to read these files; start bytes as in TIFF.
 - PNG and JPEG-XR tiled ZIFs are incompatible with TIFF readers, and start with custom bytes.
-- JPEG tiled ZIFs may be renamed to SVS (Aperio/Leica .svs ScanScope Virtual Slide) files for digital pathology and virtual microscopy applications, and are fully compatible with and equivalent to JPEG-compressed SVS slides.
+- JPEG tiled ZIFs may be renamed to Aperio/Leica .svs (ScanScope Virtual Slide) files for digital pathology and virtual microscopy applications, and are fully compatible with and equivalent to JPEG-compressed SVS slides.
 - Edge (right and lower) tiles are clipped, not padded to multiples of 16 as per the TIFF 6.0 specification (*deviation*)
 
 - Tag 51159: ZIF metadata
