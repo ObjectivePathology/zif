@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Zif by objectivepathology</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Zif</h1>
+        <h2>Zoomable Image Format</h2>
+        <a href="https://github.com/objectivepathology/zif" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>
+<a id="zif--the-zoomable-image-file-format" class="anchor" href="#zif--the-zoomable-image-file-format" aria-hidden="true"><span class="octicon octicon-link"></span></a>ZIF : the Zoomable Image File Format</h2>
+
+<h3>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h3>
+
+<p><strong>ZIF</strong>, the <strong>Zoomable Image</strong> file format, also known as the <strong>Zoomify Image</strong> file format, is a open-source, pyramidal, multiresolution tiled file format, based on TIFF, designed to enable interactive panning and zooming of extremely large images, especially over the World Wide Web and other Internet services.</p>
+
+<p>The ZIF file structure is such that it does not require an image server to deliver image views, although an image server can provide increased performance, cacheing, security, annotations, static views, transcoding, quality/bandwidth control, image adjustments, and many other features. Basic functionality requires only a web server capable of supporting byte-range requests.</p>
+
+<p>The format was developed in 2015 by <a href="http://www.objectivepathology.com"><strong>Objective Pathology Services Ltd</strong>.</a> and maintained in conjunction with <a href="http://zoomify.com"><strong>Zoomify Inc</strong>.</a></p>
+
+<h3>
+<a id="specification" class="anchor" href="#specification" aria-hidden="true"><span class="octicon octicon-link"></span></a>Specification</h3>
+
+<p>Essentially, ZIF is a subspecification of TIFF, with minor departures from the TIFF 6.0 specification to enable serverless delivery of images to modern web browsers and other client applications.</p>
+
+<ul>
+<li>ZIF files must be tiled TIFFs</li>
+<li>Only 8-bit 3-channel RGB images</li>
+<li>All tile IFDs are located sequentially in a block at the beginning of the file.</li>
+<li>Image 1 is the whole image</li>
+<li>Image 2 is a thumbnail overview... ???</li>
+<li>Tiles must be JPEG, PNG, or JPEG-XR compressed.</li>
+<li>For JPEG tiles, the JPEG tables must be contained (repeated) in every tile.</li>
+<li>For PNG and JPEG-XR tiles, note that these are not compatible with the TIFF 6.0 specification (<em>deviation</em>).</li>
+<li>Further, for JPEG-XR tiles, note that at this time only Microsoft Internet Explorer 9.0+ and Edge web browsers support this compression scheme.</li>
+<li>PNG tiles need a tile compression code in tag 259...</li>
+<li>JPEG-XR tiles need a tile compression code in tag 259...</li>
+<li>JPEG tiled ZIFs are very close to true TIFF 6.0 files, except for edge tile sizes; most readers are nevertheless fully able to read these files; start bytes as in TIFF.</li>
+<li>PNG and JPEG-XR tiled ZIFs are incompatible with TIFF readers, and start with custom bytes.</li>
+<li>JPEG tiled ZIFs may be renamed to SVS (Aperio/Leica .svs ScanScope Virtual Slide) files for digital pathology and virtual microscopy applications, and are fully compatible with JPEG-compressed SVS slides.</li>
+<li>Extensions defined in private tags</li>
+<li>Subsampled images are in SubIFD tags</li>
+<li>Edge (right and lower) tiles are clipped, not padded to multiples of 16 as per the TIFF 6.0 specification (<em>deviation</em>)</li>
+<li>Can be TIFF or BigTIFF, with TIFF preferred for files under 4 GB; note that if using LibTIFF, version 4.0 (December 2011) is required to support BigTIFF.</li>
+<li>Tag 262 (Photometric Interpretation) must be 2 (RGB)</li>
+<li>Start bytes "II" - little-endian only, "MM" not permitted.it</li>
+</ul>
+
+<h3>
+<a id="image-viewer" class="anchor" href="#image-viewer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image Viewer</h3>
+
+<p>TBD</p>
+
+<h3>
+<a id="client-libraries" class="anchor" href="#client-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Client Libraries</h3>
+
+<p>Client libraries will eventually be provided here for</p>
+
+<ul>
+<li>JavaScript</li>
+<li>CoffeeScript</li>
+<li>Python</li>
+<li>Ruby</li>
+<li>PHP</li>
+<li>C</li>
+<li>C++</li>
+<li>C# .NET</li>
+<li>D</li>
+<li>Go</li>
+<li>Rust</li>
+<li>Julia</li>
+<li>Erlang</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/objectivepathology/zif/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/objectivepathology/zif/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/objectivepathology/zif"></a> is maintained by <a href="https://github.com/objectivepathology">objectivepathology</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
