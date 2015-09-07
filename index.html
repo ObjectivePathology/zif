@@ -13,9 +13,9 @@
     <section class="page-header">
       <h1 class="project-name">Zif</h1>
       <h2 class="project-tagline">Zoomable Image Format</h2>
-      <a href="https://github.com/objectivepathology/zif" class="btn">View on GitHub</a>
-      <a href="https://github.com/objectivepathology/zif/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/objectivepathology/zif/tarball/master" class="btn">Download .tar.gz</a>
+      <a href="https://github.com/objectivepathology/ZIF" class="btn">View on GitHub</a>
+      <a href="https://github.com/objectivepathology/ZIF/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/objectivepathology/ZIF/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
@@ -25,38 +25,39 @@
 <h3>
 <a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h3>
 
-<p><strong>ZIF</strong>, the <strong>Zoomable Image</strong> file format, also known as the <strong>Zoomify Image</strong> file format, is a open-source, pyramidal, multiresolution tiled file format, based on TIFF, designed to enable interactive panning and zooming of extremely large images, especially over the World Wide Web and other Internet services.</p>
+<p><strong>ZIF</strong>, the <strong>Zoomable Image file format</strong>, also known as the <strong>Zoomify Image file format</strong>, is a open-source, multiresolution, pyramidal tiled file format, based on TIFF, designed to enable interactive panning and zooming of extremely large images, especially over the World Wide Web and other Internet services.</p>
 
-<p>The ZIF file structure is such that it does not require an image server to deliver image views, although an image server can provide increased performance, cacheing, security, annotations, static views, transcoding, quality/bandwidth control, image adjustments, and many other features. Basic functionality requires only a web server capable of supporting byte-range requests.</p>
+<p>The ZIF file structure is such that it does not require an image server to deliver image views, although an image server can provide increased performance, cacheing, security, annotations, static views, dynamic transcoding, quality/bandwidth control, image adjustments, and many other features. Basic functionality requires only a web server capable of supporting byte-range requests.</p>
 
 <p>The format was developed in 2015 by <a href="http://www.objectivepathology.com"><strong>Objective Pathology Services Ltd</strong>.</a> and maintained in conjunction with <a href="http://zoomify.com"><strong>Zoomify Inc</strong>.</a></p>
 
 <h3>
 <a id="specification" class="anchor" href="#specification" aria-hidden="true"><span class="octicon octicon-link"></span></a>Specification</h3>
 
-<p>Essentially, ZIF is a subspecification of TIFF, with minor departures from the TIFF 6.0 specification to enable serverless delivery of images to modern web browsers and other client applications.</p>
+<p>Essentially, ZIF is a subspecification of TIFF, with minor departures from the TIFF 6.0 specification, and support for web browser image codecs, to enable serverless delivery of images to modern web browsers and other client applications.</p>
 
 <ul>
 <li>ZIF files must be tiled TIFFs</li>
-<li>Only 8-bit 3-channel RGB images</li>
-<li>All tile IFDs are located sequentially in a block at the beginning of the file.</li>
+<li>Can be TIFF or BigTIFF, with TIFF preferred for files under 4 GB; note that if using LibTIFF, version 4.0 (December 2011) is required to support BigTIFF.</li>
+<li>Start bytes "II" - little-endian only, "MM" not permitted.it</li>
 <li>Image 1 is the whole image</li>
 <li>Image 2 is a thumbnail overview... ???</li>
+<li>All tile IFDs are located sequentially in a block at the beginning of the file.</li>
+<li>Subsampled image resolutions are in SubIFD tags</li>
+<li>Only 8-bit 3-channel RGB images</li>
+<li>Tag 262 (Photometric Interpretation) must be 2 (RGB)</li>
 <li>Tiles must be JPEG, PNG, or JPEG-XR compressed.</li>
 <li>For JPEG tiles, the JPEG tables must be contained (repeated) in every tile.</li>
 <li>For PNG and JPEG-XR tiles, note that these are not compatible with the TIFF 6.0 specification (<em>deviation</em>).</li>
 <li>Further, for JPEG-XR tiles, note that at this time only Microsoft Internet Explorer 9.0+ and Edge web browsers support this compression scheme.</li>
-<li>PNG tiles need a tile compression code in tag 259...</li>
-<li>JPEG-XR tiles need a tile compression code in tag 259...</li>
+<li>PNG tiles need a tile compression code in tag 259...34933</li>
+<li>JPEG-XR tiles need a tile compression code in tag 259...34934</li>
 <li>JPEG tiled ZIFs are very close to true TIFF 6.0 files, except for edge tile sizes; most readers are nevertheless fully able to read these files; start bytes as in TIFF.</li>
 <li>PNG and JPEG-XR tiled ZIFs are incompatible with TIFF readers, and start with custom bytes.</li>
-<li>JPEG tiled ZIFs may be renamed to SVS (Aperio/Leica .svs ScanScope Virtual Slide) files for digital pathology and virtual microscopy applications, and are fully compatible with JPEG-compressed SVS slides.</li>
-<li>Extensions defined in private tags</li>
-<li>Subsampled images are in SubIFD tags</li>
-<li>Edge (right and lower) tiles are clipped, not padded to multiples of 16 as per the TIFF 6.0 specification (<em>deviation</em>)</li>
-<li>Can be TIFF or BigTIFF, with TIFF preferred for files under 4 GB; note that if using LibTIFF, version 4.0 (December 2011) is required to support BigTIFF.</li>
-<li>Tag 262 (Photometric Interpretation) must be 2 (RGB)</li>
-<li>Start bytes "II" - little-endian only, "MM" not permitted.it</li>
+<li>JPEG tiled ZIFs may be renamed to SVS (Aperio/Leica .svs ScanScope Virtual Slide) files for digital pathology and virtual microscopy applications, and are fully compatible with and equivalent to JPEG-compressed SVS slides.</li>
+<li><p>Edge (right and lower) tiles are clipped, not padded to multiples of 16 as per the TIFF 6.0 specification (<em>deviation</em>)</p></li>
+<li><p>Tag 51159: ZIF metadata</p></li>
+<li>Tag 51160: ZIF annotations</li>
 </ul>
 
 <h3>
@@ -86,13 +87,23 @@
 </ul>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/objectivepathology/zif">Zif</a> is maintained by <a href="https://github.com/objectivepathology">objectivepathology</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/objectivepathology/ZIF">Zif</a> is maintained by <a href="https://github.com/objectivepathology">objectivepathology</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
 
     </section>
 
-  
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-10341872-4");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
