@@ -54,21 +54,60 @@
 <li>JPEG-XR tiles need a tile compression code in tag 259...34934</li>
 <li>JPEG tiled ZIFs are very close to true TIFF 6.0 files, except for edge tile sizes; most readers are nevertheless fully able to read these files; start bytes as in TIFF.</li>
 <li>PNG and JPEG-XR tiled ZIFs are incompatible with TIFF readers, and start with custom bytes.</li>
-<li>JPEG tiled ZIFs may be renamed to SVS (Aperio/Leica .svs ScanScope Virtual Slide) files for digital pathology and virtual microscopy applications, and are fully compatible with and equivalent to JPEG-compressed SVS slides.</li>
-<li><p>Edge (right and lower) tiles are clipped, not padded to multiples of 16 as per the TIFF 6.0 specification (<em>deviation</em>)</p></li>
-<li><p>Tag 51159: ZIF metadata</p></li>
+<li>JPEG tiled ZIFs may be renamed to Aperio/Leica .svs (ScanScope Virtual Slide) files for digital pathology and virtual microscopy applications, and are fully compatible with and equivalent to JPEG-compressed SVS slides.</li>
+<li>Edge (right and lower) tiles are clipped, not padded to multiples of 16 as per the TIFF 6.0 specification (<em>deviation</em>)</li>
+<li>Tag 51159: ZIF metadata</li>
 <li>Tag 51160: ZIF annotations</li>
 </ul>
 
 <h3>
-<a id="image-viewer" class="anchor" href="#image-viewer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image Viewer</h3>
+<a id="image-viewers" class="anchor" href="#image-viewers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image Viewers</h3>
 
-<p>TBD</p>
+<p>In future, open-source browser-based image viewers will be available here for collaborative development:</p>
+
+<ul>
+<li>Full viewer in JavaScript/CoffeeScript, with S3.js</li>
+<li>Leaflet plugin</li>
+<li>Google Maps plugin</li>
+<li>OpenLayers 3 plugin</li>
+<li>Modest Maps plugin</li>
+<li>Polymaps plugin</li>
+</ul>
+
+<p>In addition to raw ZIF byte-served access, server APIs will include:</p>
+
+<ul>
+<li>REST</li>
+<li>JSON</li>
+<li>Protocol Buffers</li>
+<li>XML-RPC</li>
+<li>MessagePack-RPC</li>
+<li>SOAP</li>
+<li>Thrift</li>
+<li><a href="http://iiif.io">IIIF</a></li>
+</ul>
+
+<p>Serialization formats:</p>
+
+<ul>
+<li>JSON</li>
+<li>MessagePack</li>
+<li>Gobs (in Go)</li>
+<li>BSON</li>
+<li>Google Protocol Buffers</li>
+<li>Thrift</li>
+<li>HDF5</li>
+<li>XML</li>
+<li>Avro</li>
+<li>Base64/JSON – strings and ArrayBuffers</li>
+<li>don’t forget data can be delivered gzipped…</li>
+<li>HmlHttpRequest2 supports ArrayBuffers, Blobs, and FormData</li>
+</ul>
 
 <h3>
 <a id="client-libraries" class="anchor" href="#client-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Client Libraries</h3>
 
-<p>Client libraries will eventually be provided here for</p>
+<p>Client libraries will eventually be provided here for:</p>
 
 <ul>
 <li>JavaScript</li>
