@@ -1,0 +1,2 @@
+# ZIF
+Zoomable Image Format
