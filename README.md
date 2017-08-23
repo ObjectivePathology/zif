@@ -15,6 +15,7 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows the 
 - Start bytes "II" - little-endian only, "MM" not permitted.
 - Image Directory IFD 1 is the whole base image
 - Tag 262 (Photometric Interpretation) must be 2 (RGB)
+- Tile size must be a multiple of 16 as per the TIFF 6.0 specification Section 15.
 
 ### Baseline Specification
 - Baseline ZIF files must be tiled TIFF 6.0 files (no BigTIFF in Baseline ZIF), so maximum dimensions are 64K x 64K pixels (65,536 x 65,536), and 4 GB file size. Note that some software only supports 2 GB TIFFs.
@@ -26,23 +27,34 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows the 
 - For JPEG tiles, the JPEG tables must be contained (duplicated) in every tile.
 - Further, for JPEG-XR tiles, note that at this time only Microsoft Internet Explorer 9.0+ and Edge web browsers support this compression scheme.
 - PNG tiles need a tile compression code in tag 259...34933
-- JPEG-XR tiles need a tile compression code in tag 259...34934
 - JPEG tiled ZIFs are very close to true TIFF 6.0 files, except for edge tile sizes; most readers are nevertheless fully able to read these files; start bytes as in TIFF.
-- PNG and JPEG-XR tiled ZIFs are incompatible with TIFF readers, and start with custom bytes.
-- JPEG tiled ZIFs may be renamed to Aperio/Leica .svs (ScanScope Virtual Slide) files for digital pathology and virtual microscopy applications, and are fully compatible with and equivalent to JPEG-compressed SVS slides.
-- Tile size must be a multiple of 16 as per the TIFF 6.0 specification Section 15.
-- Tag 51159: ZIF metadata
-- Tag 51160: ZIF annotations
+- PNG tiled ZIFs are incompatible with TIFF readers.
+- (JPEG tiled ZIFs may be renamed to Aperio/Leica .svs (ScanScope Virtual Slide) files for digital pathology and virtual microscopy applications, and are fully compatible with and equivalent to JPEG-compressed SVS slides.)
 
 ### Advanced Specification
-- Advanced ZIF files must be BigTIFF only; note that if using LibTIFF, version 4.0 (December 2011) is required to support BigTIFF (*deviation*).
-- In addition to JPEG or PNG, tiles may be JPEG XR compressed (targeting Microsoft Edge and IE 9+ browsers), or JPEG 2000 compressed (targeting Apple Safari and WebKit browsers). Note that with JPEG XR and JPEG 2000, server-based transcoding may be required for universal browser compatibility.
-- For PNG and JPEG-XR tiles, note that these are not compatible with the TIFF 6.0 specification (*deviation*).
+- Advanced ZIF files must be BigTIFF only; note that if using LibTIFF, version 4.0 (December 2011) is required to support BigTIFF (*deviation*). Note that Baseline versus Advanced ZIF may be recognized simply by testing for TIFF 6.0 vs BigTIFF.
+- In addition to JPEG or PNG, tiles may be JPEG XR compressed (targeting Microsoft Edge and IE 9+ browsers), or JPEG 2000 compressed (targeting Apple Safari and WebKit browsers). Note that with JPEG XR and JPEG 2000, server-based transcoding may be required for universal browser compatibility, and are intended for LAN-based applications rather than the public Internet.
+- For PNG, JPEG XR and JPEG 2000 tiles, note that these are not compatible with the TIFF 6.0 specification (*deviation*).
+- JPEG-XR tiles need a tile compression code in tag 259...34934
+- PNG and JPEG-XR tiled ZIFs are incompatible with TIFF readers.
 - For dedicated/embedded applications, tiles may be JPEG XT compressed (backwards-compatible with JPEG)
 
 ### Recommendations
 - All tile IFDs should be, but need not be, located sequentially in a block at the beginning of the file.
 - The size of the IDF block is readable by *?????*
+
+### Metadata
+- Tag 0x8769: EXIF metadata
+- Tag 51159: Objective/WSI/ZIF metadata
+- Tag 51160: Objective/WSI/ZIF annotations
+
+### ZIF Generators
+* Adobe Photoshop plugin (possibly native)
+* Objective Converter
+* Zoomify Converter
+* GIMP
+* VIPS
+*ImageMagick
 
 ### Image Viewers
 In future, open-source browser-based image viewers will be available here for collaborative development:
