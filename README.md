@@ -6,9 +6,9 @@ Essentially, ZIF is a subspecification of TIFF, with minor departures from the T
 
 The ZIF file structure is such that it does not require an image server to deliver image views, although an image server can provide increased performance, cacheing, security, annotations, static views, dynamic transcoding, quality/bandwidth control, image adjustments, and many other features. Basic functionality requires only a web server capable of supporting byte-range requests.
 
-The format was developed in 2015 by [**Objective Pathology Services Ltd**.](http://www.objectivepathology.com) and maintained in conjunction with [**Zoomify Inc**.](http://zoomify.com)
+The format was developed in 2015 by [**Objective Pathology Services Ltd**](http://www.objectivepathology.com). and maintained in conjunction with [**Zoomify Inc**](http://zoomify.com).
 
-ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows the TIFF 6.0 specification and is intended for smaller, simpler images, while Advanced departs somewhat from TIFF 6.0 to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs.
+ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows the TIFF 6.0 specification and is intended for smaller, simpler images, while Advanced follows the more comprehensive TIFF 6.0 Extensions to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs, and moves to BigTIFF to support very large image dimensions.
 
 ###  Common Specifications, Baseline and Advanced
 - Only tiled, 8-bit, 3-channel, interleaved RGB images are supported; no strips/rasters, planar configuration, alpha channel, 1-,2-,4+ channels, higher bit depths, etc. ZIF is intended only for common, monitor-displayable images.
@@ -41,7 +41,7 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows the 
 
 ### Recommendations
 - All tile IFDs should be, but need not be, located sequentially in a block at the beginning of the file.
-- The size of the IDF block is readable by **?????**
+- The size of the IFD block is readable by **?????**
 
 ### Metadata
 Any TIFF-compatible metadata tags are fine with ZIF. Some examples:
