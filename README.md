@@ -21,7 +21,7 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows the 
 - Baseline ZIF files must be tiled TIFF 6.0 files (no BigTIFF in Baseline ZIF), so maximum dimensions are 64K x 64K pixels (65,536 x 65,536), and 4 GB file size. Note that some software only supports 2 GB TIFFs.
 - Image Directory IFD 2 + is:
   - If IFDs ceiling(previous IFD / 2), multiresolution
-  * If all IFD's same size, time series
+  - If all IFD's same size, time series
 - Optional solid thumbnail in SubIFD 1 of IFD 1. Thumbnail must be JPEG or PNG.
 - Tiles must be JPEG or PNG compressed; JPEG here is meant to be the legacy JPEG specification (ITU Recommendation T.81 | ISO/IEC 10918-1) as commonly used on the Internet and many software packages and operating systems, and as embodied by the popular Independent JPEG Group 6b specification of 1998. Note that a common TIFF codec, LZW, is specifically disallowed in ZIF, as are raw uncoded images.
 - For JPEG tiles, the JPEG tables must be contained (duplicated) in every tile.
@@ -41,35 +41,35 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows the 
 
 ### Recommendations
 - All tile IFDs should be, but need not be, located sequentially in a block at the beginning of the file.
-- The size of the IDF block is readable by *?????*
+- The size of the IDF block is readable by **?????**
 
 ### Metadata
+Any TIFF-compatible metadata tags are fine with ZIF. Some examples:
 - Tag 0x8769: EXIF metadata
 - Tag 51159: Objective/WSI/ZIF metadata
 - Tag 51160: Objective/WSI/ZIF annotations
 
 ### ZIF Generators
 * Adobe Photoshop plugin (possibly native)
+* ImageJ / Fiji
+* GIMP
+* ImageMagick
+* VIPS
 * Objective Converter
 * Zoomify Converter
-* GIMP
-* VIPS
-* ImageMagick
 See http://iipimage.sourceforge.net/documentation/images.
 See http://libvips.blogspot.ca/2013/03/making-deepzoom-zoomify-and-google-maps.html.
 
 ### Image Viewers
 In future, open-source browser-based image viewers will be available here for collaborative development:
-
 * Full viewer in JavaScript/CoffeeScript, with S3.js
-* Leaflet plugin
+* Leaflet/Mapbox plugin
 * Google Maps plugin
 * OpenLayers 3 plugin
 * Modest Maps plugin
 * Polymaps plugin
 
 In addition to raw ZIF byte-served access, server APIs will include:
-
 * REST
 * JSON
 * Protocol Buffers
@@ -80,7 +80,6 @@ In addition to raw ZIF byte-served access, server APIs will include:
 * [IIIF](http://iiif.io)
 
 Serialization formats:
-
 * JSON
 * MessagePack
 * Gobs (in Go)
@@ -97,7 +96,6 @@ Serialization formats:
 
 ### Client Libraries
 Client libraries will eventually be provided here for:
-
 * JavaScript
 * CoffeeScript
 * Python
