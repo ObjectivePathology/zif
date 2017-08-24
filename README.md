@@ -6,7 +6,7 @@ Essentially, ZIF is a subspecification of TIFF, with minor departures from the T
 
 The ZIF file structure is such that it does not require an image server to deliver image views, although an image server can provide increased performance, cacheing, security, annotations, static views, dynamic transcoding, quality/bandwidth control, image adjustments, and many other features. Basic functionality requires only a web server capable of supporting byte-range requests.
 
-The format was developed in 2015 by [**Objective Pathology Services Ltd**](http://www.objectivepathology.com). and maintained in conjunction with [**Zoomify Inc**](http://zoomify.com).
+The format was conceived and developed in 2015 by [**Objective Pathology Services Ltd**](http://www.objectivepathology.com). and maintained and supported in conjunction with [**Zoomify Inc**](http://zoomify.com).
 
 ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows the TIFF 6.0 specification and is intended for smaller, simpler images, while Advanced follows the more comprehensive TIFF 6.0 Extensions to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs, and moves to BigTIFF to support very large image dimensions.
 
@@ -20,8 +20,8 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows the 
 ### Baseline Specification
 * Baseline ZIF files must be tiled TIFF 6.0 files (no BigTIFF in Baseline ZIF), so maximum dimensions are 64K x 64K pixels (65,536 x 65,536), and 4 GB file size. Note that some software only supports 2 GB TIFFs.
 * Image Directory IFD 2 + is:
-  * If IFDs ceiling(previous IFD / 2), multiresolution
-  * If all IFD's same size, time series
+  - If IFDs ceiling(previous IFD / 2), multiresolution
+  - If all IFD's same size, time series
 * Optional solid thumbnail in SubIFD 1 of IFD 1. Thumbnail must be JPEG or PNG.
 - Tiles must be JPEG or PNG compressed; JPEG here is meant to be the legacy JPEG specification (ITU Recommendation T.81 | ISO/IEC 10918-1) as commonly used on the Internet and many software packages and operating systems, and as embodied by the popular Independent JPEG Group 6b specification of 1998. Note that a common TIFF codec, LZW, is specifically disallowed in ZIF, as are raw uncoded images.
 - For JPEG tiles, the JPEG tables must be contained (duplicated) in every tile.
