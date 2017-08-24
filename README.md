@@ -20,8 +20,8 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows the 
 ### Baseline Specification
 - Baseline ZIF files must be tiled TIFF 6.0 files (no BigTIFF in Baseline ZIF), so maximum dimensions are 64K x 64K pixels (65,536 x 65,536), and 4 GB file size. Note that some software only supports 2 GB TIFFs.
 - Image Directory IFD 2 + is:
-  - If IFDs ceiling(previous IFD / 2), multiresolution
-  - If all IFD's same size, time series
+    - If IFDs ceiling(previous IFD / 2), multiresolution
+    - If all IFD's same size, time series
 - Optional solid thumbnail in SubIFD 1 of IFD 1. Thumbnail must be JPEG or PNG.
 - Tiles must be JPEG or PNG compressed; JPEG here is meant to be the legacy JPEG specification (ITU Recommendation T.81 | ISO/IEC 10918-1) as commonly used on the Internet and many software packages and operating systems, and as embodied by the popular Independent JPEG Group 6b specification of 1998. Note that a common TIFF codec, LZW, is specifically disallowed in ZIF, as are raw uncoded images.
 - For JPEG tiles, the JPEG tables must be contained (duplicated) in every tile.
