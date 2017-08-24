@@ -1,0 +1,8 @@
+title: ZIF
+description: Zoomable Image Format
+google_analytics: UA-10341872-4
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
