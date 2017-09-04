@@ -27,7 +27,7 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows a su
 * Optional solid thumbnail in SubIFD 1 of IFD 1 (for multiresolution images) or each IFD (for other content). Thumbnail must be JPEG or PNG, and no larger than 2048 x 2048; recommended size is 1024 pixels on largest side, and a progressive encoding is recommended for JPEG thumbnails.
 * Tiles must be JPEG or PNG compressed; JPEG here is meant to be the legacy JPEG specification (ITU Recommendation T.81 | ISO/IEC 10918&ndash;1) as commonly used on the Internet and many software packages and operating systems, and as embodied by the popular Independent JPEG Group 6b specification of 1998. Note that two common TIFF codecs, LZW and Deflate, are specifically disallowed in ZIF, as are raw uncoded images.
 * For JPEG tiles, the JPEG tables must be contained (duplicated) in every tile, such that each tile is independently viewable.
-* For JPEG tiles, TIFF tag Compression must be 7 (JPEG), and TIFF tag Photometric Interpretation must be YCbCr. Channel subsampling is permitted.
+* For JPEG tiles, TIFF tag Compression must be 7 (JPEG), and TIFF tag PhotometricInterpretation must be YCbCr. Channel subsampling is permitted.
 * PNG tiles need a tile compression code in tag 259...34933
 * JPEG tiled ZIFs are true TIFF 6.0 Part 2 files; some common readers are fully able to read these files.
 * PNG tiled ZIFs are incompatible with common TIFF readers.
@@ -35,7 +35,7 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows a su
 ### Advanced Specification
 - Advanced ZIF files must be BigTIFF only; note that if using LibTIFF, version 4.0 (December 2011) is required to support BigTIFF (*deviation*). Note that Baseline versus Advanced ZIF may be recognized simply by testing for TIFF 6.0 vs BigTIFF.
 - In addition to JPEG or PNG, tiles may be JPEG XR compressed (targeting Microsoft Edge and IE 9+ browsers), or JPEG 2000 compressed (targeting Apple Safari and WebKit browsers). Note that with JPEG XR and JPEG 2000, server-based transcoding may be required for universal browser compatibility, and are intended for LAN-based applications rather than the public Internet.
-- For JPEG tiles, TIFF tag Photometric Interpretation may additionally be RGB, in which case no channel subsampling is permitted.
+- For JPEG tiles, TIFF tag PhotometricInterpretation may additionally be RGB, in which case no channel subsampling is permitted.
 - For PNG, JPEG XR and JPEG 2000 tiles, note that these are not compatible with the TIFF 6.0 specification (*deviation*).
 - JPEG-XR tiles need a tile compression code in tag 259...34934
 - Further, for JPEG-XR tiles, note that at this time only Microsoft Internet Explorer 9.0+ and Edge web browsers support this compression scheme.
@@ -45,6 +45,7 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows a su
 ### Recommendations
 - All tile IFDs should be, but need not be, located sequentially in a block at the beginning of the file.
 - The size of the IFD block is readable by **?????**
+- note that standards-compliant JPEG 2000 Compression is value 34712 (0x8798) with PhotometricInterpretation of either (YCbCr) or (RCT);<br>Aperio.svs files also use 33003 (0x80EB) for YCbCr from Matrox libraries, or 33005 (0x80ED) for RGB/RCT from Kakadu libraries. Both of these are not standards-compliant, and may not be used in in any ZIF files. Note that PhotometricInterpretation of JPEG 2000 data is not defined in the TIFF specifications.
 
 ### Metadata
 Any TIFF-compatible metadata tags are fine with ZIF. Some examples:
