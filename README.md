@@ -45,7 +45,7 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows a su
 ### Recommendations
 - All tile IFDs should be, but need not be, located sequentially in a block at the beginning of the file.
 - The size of the IFD block is readable by **?????**
-- note that standards-compliant JPEG 2000 Compression is value 34712 (0x8798) with PhotometricInterpretation of either (YCbCr) or (RCT);<br>Aperio.svs files also use 33003 (0x80EB) for YCbCr from Matrox libraries, or 33005 (0x80ED) for RGB/RCT from Kakadu libraries. Both of these are not standards-compliant, and may not be used in in any ZIF files. Note that PhotometricInterpretation of JPEG 2000 data is not defined in the TIFF specifications.
+- note that standards-compliant JPEG 2000 Compression is value 34712 (0x8798) with PhotometricInterpretation of either (YCbCr) or (RCT). Aperio.svs files also use 33003 (0x80EB) for YCbCr from Matrox libraries, or 33005 (0x80ED) for RGB/RCT from Kakadu libraries. Both of these are not standards-compliant, and may not be used in in any ZIF files. Note that PhotometricInterpretation of JPEG 2000 data is not defined in the TIFF specifications.
 
 ### Metadata
 Any TIFF-compatible metadata tags are fine with ZIF. Some examples:
