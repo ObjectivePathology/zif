@@ -5,7 +5,7 @@
 
 Essentially, ZIF is a subspecification of TIFF, with minor departures from the TIFF 6.0 specification, and support for web browser image codecs, to enable serverless delivery of images to modern web browsers and other network client applications.
 
-The ZIF file structure is such that it does not require an image server to deliver image views, although an image server can provide increased performance, cacheing, security, annotations, static views, dynamic transcoding, quality/bandwidth control, image adjustments, and many other features. Basic functionality requires only a web server capable of supporting byte-range requests per [RFC 7233(https://tools.ietf.org/html/rfc7233).
+The ZIF file structure is such that it does not require an image server to deliver image views, although an image server can provide increased performance, cacheing, security, annotations, static views, dynamic transcoding, quality/bandwidth control, image adjustments, and many other features. Basic functionality requires only a web server capable of supporting byte-range requests per [RFC 7233](https://tools.ietf.org/html/rfc7233).
 
 The format was conceived and developed in 2015 by [**Objective Pathology Services Ltd**](http://www.objectivepathology.com). and maintained and supported in conjunction with [**Zoomify Inc**](http://zoomify.com).
 
@@ -21,7 +21,7 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows a su
 ### Baseline Specification
 * Baseline ZIF files must be tiled TIFF 6.0 files (no BigTIFF is permitted in Baseline ZIF); maximum dimensions are 64K x 64K pixels (65,536 x 65,536), and not more than 4 GB file size. Note that some software only supports 2 GB TIFFs.
 * Image Directory IFD 2 + is:
-  * If IFDs ceiling(previous IFD / 2), multiresolution
+  * If IFDs are halving in size (pixels rounded up, contents precisely half, left/top aligned), multiresolution
   * If all IFD's same size, time series or focal plane (Z-stack)
   * else, a collection of distinct images
 * Optional solid thumbnail in SubIFD 1 of IFD 1 (for multiresolution images) or each IFD (for other content). Thumbnail must be JPEG or PNG, and no larger than 2048 x 2048; recommended size is 1024 pixels on largest side, and a progressive encoding is recommended for JPEG thumbnails.
