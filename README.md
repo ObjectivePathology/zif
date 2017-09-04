@@ -25,7 +25,7 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows a su
   * If all IFD's same size, time series or focal plane (Z-stack)
   * else, a collection of distinct images
 * Optional solid thumbnail in SubIFD 1 of IFD 1 (for multiresolution images) or each IFD (for other content). Thumbnail must be JPEG or PNG, and no larger than 2048 x 2048; recommended size is 1024 pixels on largest side, and a progressive encoding is recommended for JPEG thumbnails.
-* Tiles must be JPEG or PNG compressed; JPEG here is meant to be the legacy JPEG specification (ITU Recommendation T.81 | ISO/IEC 10918&ndash;1) as commonly used on the Internet and many software packages and operating systems, and as embodied by the popular Independent JPEG Group 6b specification of 1998. Note that two common TIFF codecs, LZW and Deflate, are specifically disallowed in ZIF, as are raw uncoded images.
+* Tiles must be JPEG or PNG compressed; JPEG here is meant to be the legacy JPEG specification (ITU Recommendation T.81 : ISO/IEC 10918-1) as commonly used on the Internet and many software packages and operating systems, and as embodied by the popular Independent JPEG Group 6b specification of 1998. Note that two common TIFF codecs, LZW and Deflate, are specifically disallowed in ZIF, as are raw uncoded images.
 * For JPEG tiles, the JPEG tables must be contained (duplicated) in every tile, such that each tile is independently viewable.
 * For JPEG tiles, TIFF tag Compression must be 7 (JPEG), and TIFF tag PhotometricInterpretation must be YCbCr. Channel subsampling is permitted.
 * PNG tiles need a tile compression code in tag 259...34933
