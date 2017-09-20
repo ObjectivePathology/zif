@@ -22,13 +22,14 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows a su
 * Baseline ZIF files must be tiled TIFF 6.0 files (no BigTIFF is permitted in Baseline ZIF); maximum dimensions are 64K x 64K pixels (65,536 x 65,536), and not more than 4 GB file size. Note that some software only supports 2 GB TIFFs.
 * Image Directory IFD 2 + is:
   * If IFDs are halving in size (pixels rounded up, contents precisely half, left/top aligned), multiresolution
-  * If all IFD's same size, time series or focal plane (Z-stack)
+  * If all IFD's same size, time series
   * else, a collection of distinct images
-* Optional solid thumbnail in SubIFD 1 of IFD 1 (for multiresolution images) or each IFD (for other content). Thumbnail must be JPEG or PNG, and no larger than 2048 x 2048; recommended size is 1024 pixels on largest side, and a progressive encoding is recommended for JPEG thumbnails.
+* Images/tiles may have a Z-dimension, which without any metadata description represents focal plane slices or true z-dimension (not time-series, exposure series, or other representations).
+* Optional solid thumbnail in SubIFD 1 of IFD 1 (for multiresolution images) or each IFD (for other content). Thumbnail must be JPEG or PNG, and no larger than 4096 x 4096; recommended size is 1024 pixels on largest side, and a progressive encoding is recommended for JPEG thumbnails.
 * Tiles must be JPEG or PNG compressed; JPEG here is meant to be the legacy JPEG specification (ITU Recommendation T.81 : ISO/IEC 10918-1) as commonly used on the Internet and many software packages and operating systems, and as embodied by the popular Independent JPEG Group 6b specification of 1998. Note that two common TIFF codecs, LZW and Deflate, are specifically disallowed in ZIF, as are raw uncoded images.
 * For JPEG tiles, the JPEG tables must be contained (duplicated) in every tile, such that each tile is independently viewable.
-* For JPEG tiles, TIFF tag Compression must be 7 (JPEG), and TIFF tag PhotometricInterpretation must be YCbCr. Channel subsampling is permitted.
-* PNG tiles need a tile compression code in tag 259...34933
+* For JPEG tiles, TIFF tag 259(0x0103): Compression must be 7 (JPEG), and TIFF tag 262(0x0106): PhotometricInterpretation must be YCbCr. Channel subsampling is permitted.
+* PNG tiles need a tile compression code in tag 259(0x0103): Compression of 34933.
 * JPEG tiled ZIFs are true TIFF 6.0 Part 2 files; some common readers are fully able to read these files.
 * PNG tiled ZIFs are incompatible with common TIFF readers.
 
