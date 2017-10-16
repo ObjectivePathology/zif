@@ -3,23 +3,23 @@
 ### Description
 **ZIF**, the **Zoomable Image File format**, alternatively also known as the **Zoomify Image File format**, is an open-source, web-friendly, multi-resolution, pyramidal tiled file format, based on TIFF, designed to enable interactive panning and zooming of extremely large images, especially over the World Wide Web and other Internet services.
 
-Essentially, ZIF is a subspecification of TIFF, with minor departures from the TIFF 6.0 specification, and support for web browser image codecs, to enable serverless delivery of images to modern web browsers and other network client applications.
+Essentially, ZIF is a subspecification of BigTIFF, departing substantially from the TIFF 6.0 Baseline and TIFF 6.0 Part 2: TIFF Extensions specifications, adding support for very large images and web browser image codecs, to enable serverless delivery of images to modern web browsers and other network client applications, while still being interoperable with the popular [libTIFF](http://simplesystems.org/libtiff) imaging library.
 
 The ZIF file structure is such that it does not require an image server to deliver image views, although an image server can provide increased performance, cacheing, security, annotations, static views, dynamic transcoding, quality/bandwidth control, image adjustments, and many other features. Basic functionality requires only a web server capable of supporting byte-range requests per [RFC 7233](https://tools.ietf.org/html/rfc7233).
 
 The format was conceived and developed in 2015 by [**Objective Pathology Services Ltd**](http://www.objectivepathology.com). and maintained and supported in conjunction with [**Zoomify Inc**](http://zoomify.com).
 
-ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows a subset the TIFF 6.0 Part 2: TIFF Extensions specification and is intended for smaller, simpler images, while Advanced follows more comprehensive TIFF Extensions subset to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs, and moves to BigTIFF to support very large image dimensions. Both flavours of ZIF can be manipulated with [libTIFF](http://simplesystems.org/libtiff) and other libraries.
+ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows a subset the TIFF 6.0 Part 2: TIFF Extensions specification and is intended for easy implementation and wide compatibility, while Advanced follows more comprehensive TIFF Extensions subset to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs. Both flavours of ZIF can be manipulated with [libTIFF](http://simplesystems.org/libtiff) v.4.0 (c.2011) and other libraries suppprting BigTIFF.
 
 ###  Common Specifications, Baseline and Advanced
 - Only tiled, 8-bit, 3-channel, interleaved RGB images are supported; no strips/rasters, planar configuration, alpha channel, 1-,2-,4+ channels, higher bit depths, etc. ZIF is intended only for common, monitor-displayable images.
 - Start bytes "II" - little-endian only, "MM" not permitted.
-- Image Directory IFD 1 is the whole base image
+- Version 0x002B for BigTIFF only, never TIFF 6.0 0x002A
+- Image Directory IFD 1 is the whole base image, always interleaved and tiled
 - Tag 262 (Photometric Interpretation) must be 2 (RGB)
 - Tile size must be a multiple of 16 as per the TIFF 6.0 specification Section 15.
 
 ### Baseline Specification
-* Baseline ZIF files must be tiled TIFF 6.0 files (no BigTIFF is permitted in Baseline ZIF); maximum dimensions are 64K x 64K pixels (65,536 x 65,536), and not more than 4 GB file size. Note that some software only supports 2 GB TIFFs.
 * Image Directory IFD 2 + is:
   * If IFDs are halving in size (pixels rounded up, contents precisely half, left/top aligned), multiresolution
   * If all IFD's same size, time series
@@ -34,7 +34,6 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows a su
 * PNG tiled ZIFs are incompatible with common TIFF readers.
 
 ### Advanced Specification
-- Advanced ZIF files must be BigTIFF only; note that if using LibTIFF, version 4.0 (December 2011) is required to support BigTIFF (*deviation*). Note that Baseline versus Advanced ZIF may be recognized simply by testing for TIFF 6.0 vs BigTIFF.
 - In addition to JPEG or PNG, tiles may be JPEG XR compressed (targeting Microsoft Edge and IE 9+ browsers), or JPEG 2000 compressed (targeting Apple Safari and WebKit browsers). Note that with JPEG XR and JPEG 2000, server-based transcoding may be required for universal browser compatibility, and are intended for LAN-based applications rather than the public Internet.
 - For JPEG tiles, TIFF tag PhotometricInterpretation may additionally be RGB, in which case no channel subsampling is permitted.
 - For PNG, JPEG XR and JPEG 2000 tiles, note that these are not compatible with the TIFF 6.0 specification (*deviation*).
