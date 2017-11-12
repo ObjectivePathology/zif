@@ -9,10 +9,13 @@ The ZIF file structure is such that it does not require an image server to deliv
 
 The format was conceived and developed in 2015 by [**Objective Pathology Services Ltd**](http://www.objectivepathology.com). and maintained and supported in conjunction with [**Zoomify Inc**](http://zoomify.com).
 
-ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows a subset the TIFF 6.0 Part 2: TIFF Extensions specification and is intended for easy implementation and wide compatibility, while Advanced follows more comprehensive TIFF Extensions subset to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs. Both flavours of ZIF can be manipulated with [libTIFF](http://simplesystems.org/libtiff) v.4.0 (c.2011) and other libraries suppprting BigTIFF.
+ZIF comes in two flavors, Baseline and Advanced; Baseline is intended for easy implementation and wide compatibility, while Advanced takes inspiration from the more comprehensive TIFF Extensions subset to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs. All forms of ZIF can be manipulated with [libTIFF](http://simplesystems.org/libtiff) v.4.0 (c.2011) and other libraries supporting BigTIFF.
+
+### Why no "standard" TIFF 6.0 support?
+Since all zoomable images require tiles, and since for browser interoperability either JPEG or PNG codecs not supported by baseline TIFF are required, even with a 32-bit TIFF 6.0 Part 2 implementation almost no existing software could read or write the images anyway; so to keep ZIF implementations simple and future-focused, only BigTIFF containers are permitted.
 
 ###  Common Specifications, Baseline and Advanced
-- Only tiled, 8-bit, 3-channel, interleaved RGB images are supported; no strips/rasters, planar configuration, alpha channel, 1-,2-,4+ channels, higher bit depths, etc. ZIF is intended only for common, monitor-displayable images.
+- no strips/rasters, planar configuration, alpha channel, 1-,2-,4+ channels, higher bit depths, etc. ZIF is intended only for common, monitor-displayable images.
 - Start bytes "II" - little-endian only, "MM" not permitted.
 - Version 0x002B for BigTIFF only, never TIFF 6.0 0x002A
 - Image Directory IFD 1 is the whole base image, always interleaved and tiled
@@ -20,6 +23,7 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows a su
 - Tile size must be a multiple of 16 as per the TIFF 6.0 specification Section 15.
 
 ### Baseline Specification
+* Only tiled, 8-bit, 3-channel, interleaved RGB images are supported; 
 * Image Directory IFD 2 + is:
   * If IFDs are halving in size (pixels rounded up, contents precisely half, left/top aligned), multiresolution
   * If all IFD's same size, time series
@@ -41,6 +45,15 @@ ZIF comes in two flavors, Baseline and Advanced; Baseline generally follows a su
 - Further, for JPEG-XR tiles, note that at this time only Microsoft Internet Explorer 9.0+ and Edge web browsers support this compression scheme.
 - PNG and JPEG-XR tiled ZIFs are incompatible with TIFF readers.
 - For dedicated/embedded applications, tiles may be JPEG XT compressed (backwards-compatible with JPEG)
+
+### Typical Codings
+##### 3-channel 8-bit lossy "normal" single zoomable image
+Code as Baseline, JPEG tiles (3-channel interleaved), using chain of top-level IFDs as decreasing resolution levels (pixels must be halving, rounded up)
+##### 3-channel 8-bit lossless "normal" single zoomable image
+Code as Baseline, 24-bit PNG tiles (3-channel interleaved), using chain of top-level IFDs as decreasing resolution levels (pixels must be halving, rounded up)
+##### n-channel JPEG 2000 tiled image
+Note that this is *not* a true JPEG 2000 file
+Code as Advanced, first top-level IFD contains 
 
 ### Recommendations
 - All tile IFDs should be, but need not be, located sequentially in a block at the beginning of the file.
