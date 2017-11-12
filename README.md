@@ -51,9 +51,10 @@ Since all zoomable images require tiles, and since for browser interoperability 
 Code as Baseline, JPEG tiles (3-channel interleaved), using chain of top-level IFDs as decreasing resolution levels (pixels must be halving, rounded up)
 ##### 3-channel 8-bit lossless "normal" single zoomable image
 Code as Baseline, 24-bit PNG tiles (3-channel interleaved), using chain of top-level IFDs as decreasing resolution levels (pixels must be halving, rounded up)
-##### n-channel JPEG 2000 tiled image
+##### 3-channel 8-bit JPEG 2000 tiled single image
 Note that this is *not* a true JPEG 2000 file
-Code as Advanced, first top-level IFD contains 
+Recommended: code as Advanced, JPEG 2000 tiles (3-channel interleaved), first top-level IFD contains base image, Sub-IFDs contain decreasing resolution levels
+Not recommended: code as Advanced, JPEG 2000 tiles (3-channel interleaved), using chain of top-level IFDs as decreasing resolution levels (pixels must be halving, rounded up)
 
 ### Recommendations
 - All tile IFDs should be, but need not be, located sequentially in a block at the beginning of the file.
