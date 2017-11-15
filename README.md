@@ -1,4 +1,4 @@
-<img src="ZIF-logo-216x126.png" width="216" height="126">
+<img src="ZIF.svg" width="216" height="126">
 
 ## ZIF : the Zoomable Image File Format
 
