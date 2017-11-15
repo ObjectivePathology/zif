@@ -1,5 +1,7 @@
 ## ZIF : the Zoomable Image File Format
 
+<img src="ZIF-logo-216x126.png" width="216" height="126">
+
 ### Description
 **ZIF**, the **Zoomable Image File format**, alternatively also known as the **Zoomify Image File format**, is an open-source, web-friendly, multi-resolution, pyramidal tiled file format, based on TIFF, designed to enable interactive panning and zooming of extremely large images, especially over the World Wide Web and other Internet services.
 
