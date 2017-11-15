@@ -24,7 +24,6 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 - Tile size must be a multiple of 16 as per the TIFF&nbsp;6.0 specification Section&nbsp;15.
 
 | Zoom | Z-stack |
-| -able | / Focus |
 | --- | --- |
 | &#10003; | &#10007; |
 
