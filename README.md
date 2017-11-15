@@ -23,14 +23,21 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 - Image Directory IFD&nbsp;1 is the whole base image, always interleaved and tiled
 - Tile size must be a multiple of 16 as per the TIFF&nbsp;6.0 specification Section&nbsp;15.
 
+```Code
+```
+
+```
+Code2
+```
+
 <div align="center">
 
-```| Zoom-able | Z-stackFocal | TimeSeries | Baseline | Advanced |
+| Zoom-able | Z-stackFocal | TimeSeries | Baseline | Advanced |
 | :---: | :---: | :---: | :---: | :---: |
 | &#10004; | &#10007; | &#10007; | &#10004; | &#10007; |
 | &#10007; | &#10004; | &#10007; | &#10004; | &#10007; |
 | &#10007; | &#10007; | &#10004; | &#10004; | &#10007; |
-```
+
 </div>
 
 ### Baseline Specification
