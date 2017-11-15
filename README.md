@@ -24,10 +24,10 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 - Tile size must be a multiple of 16 as per the TIFF&nbsp;6.0 specification Section&nbsp;15.
 <div align="center">
 | Zoom<br>-able | Z-stack<br>/ Focal | Time<br>Series | Baseline | Advanced |
-| :---: | :---: | :---: |
-| &#10003; | &#10007; | &#10007; |
-| &#10007; | &#10003; | &#10007; |
-| &#10007; | &#10007; | &#10003; |
+| :---: | :---: | :---: | :---: | :---: |
+| &#10003; | &#10007; | &#10007; | &#10007; | &#10007; |
+| &#10007; | &#10003; | &#10007; | &#10007; | &#10007; |
+| &#10007; | &#10007; | &#10003; | &#10007; | &#10007; |
 </div>
 ### Baseline Specification
 * Only tiled, 8-bit, 1- or 3-channel, interleaved monochrome or RGB images are supported; 
