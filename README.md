@@ -23,6 +23,19 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 - Image Directory IFD&nbsp;1 is the whole base image, always interleaved and tiled
 - Tile size must be a multiple of 16 as per the TIFF&nbsp;6.0 specification Section&nbsp;15.
 
+| Zoom |
+| -able |
+| --- |
+| yes |
+| &#10003; |
+| &#10004; |
+| &#10005; |
+| &#10006; |
+| &#10007; |
+| &#10008; |
+| &check; |
+
+
 ### Baseline Specification
 * Only tiled, 8-bit, 1- or 3-channel, interleaved monochrome or RGB images are supported; 
 * Image Directory IFD&nbsp;2 + is:
