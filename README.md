@@ -25,7 +25,7 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 
 | Zoom-able | Z-stackFocal | TimeSeries || Baseline | Advanced |
 | :---: | :---: | :---: || :---: | :---: |
-| &#10003; | - | &ndash; | &#10003; | &#10003; |
+| &#10003; | - | &ndash; || &#10003; | &#10003; |
 | &ndash; | &#10003; | &ndash; || &#10003; | &#10003; |
 | &ndash; | &ndash; | &#10003; || &#10003; | &#10003; |
 | &ndash; | &ndash; | &#10003; || &#10003; | &#10003; |
