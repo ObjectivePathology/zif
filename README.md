@@ -14,7 +14,7 @@ The format was conceived and developed in 2015 by [**Objective Pathology Service
 ZIF comes in two flavors, Baseline and Advanced; Baseline is intended for easy implementation and wide compatibility, while Advanced takes inspiration from the more comprehensive TIFF Extensions subset to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs. All forms of ZIF can be manipulated with [libTIFF](http://simplesystems.org/libtiff) v.4.0 (c.2011) and other libraries supporting BigTIFF.
 
 ### Why no "standard" TIFF 6.0 support?
-Since all zoomable images require tiles, many zoomable images are larger than the 64Kx64K, 4 GB TIFF 6.0 limits, and since for browser interoperability either JPEG or PNG codecs not supported by baseline TIFF are required, even with a 32-bit TIFF 6.0 Part 2 implementation almost no existing software could read or write most images anyway; so to keep ZIF implementations simple and future-focused, only BigTIFF containers are permitted.
+Since all zoomable images require tiles, many zoomable images are larger than the 64Kx64K, 4&nbsp;GB TIFF 6.0 limits, and since for browser interoperability either JPEG or PNG codecs not supported by baseline TIFF are required, even with a 32-bit TIFF 6.0 Part 2 implementation almost no existing software could read or write most images anyway; so to keep ZIF implementations simple and future-focused, only BigTIFF containers are permitted.
 
 ###  Common Specifications, Baseline and Advanced
 - no strips/rasters, planar configuration, alpha channel, higher bit depths, etc. ZIF Baseline is intended only for common, monitor-displayable images, 8-bit, monochrome or RGB.
