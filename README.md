@@ -24,8 +24,8 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 - Tile size must be a multiple of 16 as per the TIFF&nbsp;6.0 specification Section&nbsp;15.
 
 <div align="center">
-```
-| Zoom-able | Z-stackFocal | TimeSeries | Baseline | Advanced |
+
+```| Zoom-able | Z-stackFocal | TimeSeries | Baseline | Advanced |
 | :---: | :---: | :---: | :---: | :---: |
 | &#10004; | &#10007; | &#10007; | &#10004; | &#10007; |
 | &#10007; | &#10004; | &#10007; | &#10004; | &#10007; |
