@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="216" height="126"  xml:space="preserve">
+    <path stroke="none" fill="#2266AA" d="M 0,18 L 75,18 75,42 30,102 75,102 75,126 0,126 0,102 45,42 0,42 0,18 Z M 0,18" />
+    <path stroke="none" fill="#3399FF" d="M 102,6 L 84,27 120,27 102,6 Z M 102,6" />
+    <path stroke="none" fill="#2266AA" d="M 90,42 L 114,42 114,102 90,102 90,42 Z M 90,42" />
+    <path stroke="none" fill="#2266AA" d="M 132,18 L 204,18 204,42 156,42 156,60 192,60 192,84 156,84 156,126 132,126 132,18 Z M 132,18" />
+    <path stroke="none" fill="#3399FF" d="M 192,126 L 216,126 216,102 192,102 192,126 Z M 192,126" />
+</svg>
