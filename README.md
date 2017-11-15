@@ -1,6 +1,6 @@
-## ZIF : the Zoomable Image File Format
-
 <img src="ZIF-logo-216x126.png" width="216" height="126">
+
+## ZIF : the Zoomable Image File Format
 
 ### Description
 **ZIF**, the **Zoomable Image File format**, alternatively also known as the **Zoomify Image File format**, is an open-source, web-friendly, multi-resolution, pyramidal tiled file format, based on TIFF, designed to enable interactive panning and zooming of extremely large images, especially over the World Wide Web and other Internet services.
@@ -34,14 +34,14 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 * Tiles must be JPEG or PNG compressed; JPEG here is meant to be the legacy JFIF specification (ITU Recommendation T.81 : ISO/IEC 10918-1) as commonly used on the Internet and many software packages and operating systems, and as embodied by the popular Independent JPEG Group's libjpeg v6b specification of 1998. JPEG tiles must be packaged as standalone JFIF streams (see below). Note that two very common TIFF codecs, LZW and Deflate, are specifically disallowed in ZIF, as are raw uncoded images.
 * For JPEG tiles, the JPEG tables must be contained (duplicated) in every tile, such that each extracted tile is independently viewable.
 * For JPEG tiles, the JFIF APPn colorspace must be contained (duplicated) in every tile, such that each extracted tile is independently viewable. Note that implementations should ideally also support the Adobe APPn colorspace tag also for increased compatibility with JPEG codecs.
-* For JPEG tiles, TIFF tag 259(0x0103): Compression must be 7 (JPEG), and TIFF tag 262<sub>10</sub> (0x0106<sub>16</sub>): PhotometricInterpretation must be RGB or YCbCr for 3-channel images, or grayscale for 1-channel monochrome images. Channel subsampling of either 4:4:4 or 4:2:0 is permitted for YCbCr colorspace; RGB colorspace must be 4:4:4 subsampled.
-* PNG tiles need a tile compression code in tag 259(0x0103): Compression of 34933. 24-bit true-color PNGs are recommended; although palettized PNGs are permitted they are highly discouraged.
+* For JPEG tiles, TIFF tag 259<sub>10</sub> (0103<sub>16</sub>): Compression must be 7 (JPEG), and TIFF tag 262<sub>10</sub> (0106<sub>16</sub>): PhotometricInterpretation must be RGB or YCbCr for 3-channel images, or grayscale for 1-channel monochrome images. Channel subsampling of either 4:4:4 or 4:2:0 is permitted for YCbCr colorspace; RGB colorspace must be 4:4:4 subsampled.
+* PNG tiles need a tile compression code in tag 259<sub>10</sub> (0103<sub>16</sub>): Compression of 34933<sub>10</sub>. 24-bit true-color PNGs are recommended; although palettized PNGs are permitted they are highly discouraged.
 
 ### Advanced Specification
 - In addition to JPEG or PNG, tiles may be JPEG XR compressed (targeting Microsoft Edge and IE 9+ browsers), or JPEG 2000 compressed (targeting Apple Safari and WebKit browsers). Note that with JPEG XR and JPEG 2000, server-based transcoding may be required for universal browser compatibility, and are intended for LAN-based applications rather than the public Internet.
 - For JPEG tiles, TIFF tag PhotometricInterpretation may additionally be RGB, in which case no channel subsampling is permitted.
 - For PNG, JPEG XR and JPEG 2000 tiles, note that these are not compatible with the TIFF 6.0 specification (*deviation*).
-- JPEG-XR tiles need a tile compression code in tag 259(x0103): Compression of 34934.
+- JPEG-XR tiles need a tile compression code in tag 259<sub>10</sub> (0103<sub>16</sub>): Compression of 34934<sub>10</sub>.
 - Further, for JPEG-XR tiles, note that at this time only Microsoft Internet Explorer 9.0+ and Edge web browsers support this compression scheme.
 - For dedicated/embedded applications, tiles may optionally be JPEG XT compressed (backwards-compatible with JPEG), still using compression code 7 (JPEG), but with the knowledge that not all implementations will have access to the additional detail that JPEG XT provides over JPEG.
 
@@ -58,13 +58,13 @@ Not recommended: code as Advanced, JPEG 2000 tiles (3-channel interleaved), usin
 ### Recommendations
 - All tile IFDs should be, but need not be, located sequentially in a block at the beginning of the file.
 - The size of the IFD block is readable by **?????**
-- note that standards-compliant JPEG 2000 Compression is value 34712 (0x8798) with PhotometricInterpretation of either (YCbCr) or (RCT). Aperio.svs files also use 33003 (0x80EB) for YCbCr from Matrox libraries, or 33005 (0x80ED) for RGB/RCT from Kakadu libraries. Both of these are not standards-compliant, and may not be used in in any ZIF files. Note that PhotometricInterpretation of JPEG 2000 data is not defined in the TIFF specifications.
+- note that standards-compliant JPEG 2000 Compression is value 34712<sub>10</sub> (8798<sub>16</sub>) with PhotometricInterpretation of either (YCbCr) or (RCT). Aperio.svs files also use 33003<sub>10</sub> (80EB<sub>16</sub>) for YCbCr from Matrox libraries, or 33005<sub>10</sub> (80ED<sub>16</sub>) for RGB/RCT from Kakadu libraries. Both of these are not standards-compliant, and may not be used in in any ZIF files. Note that PhotometricInterpretation of JPEG 2000 data is not defined in the TIFF specifications.
 
 ### Metadata
 Any TIFF-compatible metadata tags are fine with ZIF. Some examples:
-- Tag 0x8769: EXIF metadata
-- Tag 51159: Objective/WSI/ZIF metadata
-- Tag 51160: Objective/WSI/ZIF annotations
+- Tag 0x8769<sub>10</sub>: EXIF metadata
+- Tag 51159<sub>10</sub>: Objective/WSI/ZIF metadata
+- Tag 51160<sub>10</sub>: Objective/WSI/ZIF annotations
 
 ### ZIF Generators
 * Adobe Photoshop plugin (possibly native)
