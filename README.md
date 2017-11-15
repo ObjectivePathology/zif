@@ -14,7 +14,7 @@ The format was conceived and developed in 2015 by [**Objective Pathology Service
 ZIF comes in two flavors, Baseline and Advanced; Baseline is intended for easy implementation and wide compatibility, while Advanced takes inspiration from the more comprehensive TIFF Extensions subset to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs. All forms of ZIF can be manipulated with [libTIFF](http://simplesystems.org/libtiff)&nbsp;v.4.0 (circa 2011) and other libraries supporting BigTIFF.
 
 ### Why no "standard" TIFF 6.0 support?
-Since all zoomable images require tiles, many zoomable images are larger than the 64Kx64K, 4&nbsp;GB TIFF&nbsp;6.0 limits, and since for browser interoperability either JPEG or PNG codecs not supported by baseline TIFF are required, even with a 32-bit TIFF&nbsp;6.0 Part&nbsp;2 implementation almost no existing software could read or write most images anyway; so to keep ZIF implementations simple and future-focused, only BigTIFF containers are permitted.
+Since all zoomable images require tiles, many zoomable images are larger than the 64K&nbsp;&#10005;&nbsp;64K, 4&nbsp;GB TIFF&nbsp;6.0 limits, and since for browser interoperability either JPEG or PNG codecs not supported by baseline TIFF are required, even with a 32-bit TIFF&nbsp;6.0 Part&nbsp;2 implementation almost no existing software could read or write most images anyway; so to keep ZIF implementations simple and future-focused, only BigTIFF containers are permitted.
 
 ###  Common Specifications, Baseline and Advanced
 - no strips/rasters, planar configuration, alpha channel, higher bit depths, etc. ZIF Baseline is intended only for common, monitor-displayable images, 8-bit, monochrome or RGB.
@@ -23,18 +23,10 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 - Image Directory IFD&nbsp;1 is the whole base image, always interleaved and tiled
 - Tile size must be a multiple of 16 as per the TIFF&nbsp;6.0 specification Section&nbsp;15.
 
-| Zoom |
-| -able |
-| --- |
-| yes |
-| &#10003; |
-| &#10004; |
-| &#10005; |
-| &#10006; |
-| &#10007; |
-| &#10008; |
-| &check; |
-
+| Zoom | Z-stack |
+| -able | / Focus |
+| --- | --- |
+| &#10003; | &#10007; |
 
 ### Baseline Specification
 * Only tiled, 8-bit, 1- or 3-channel, interleaved monochrome or RGB images are supported; 
@@ -43,7 +35,7 @@ Since all zoomable images require tiles, many zoomable images are larger than th
   * If all IFD's are the same size, time series
   * else, a collection of distinct images
 * Images/tiles may have a Z-dimension, which without any metadata description represents focal plane slices or true z-dimension (never time-series, exposure series, or other representations).
-* Optional solid thumbnail in SubIFD 1 of IFD 1 (for multiresolution images) or each IFD (for other content). Thumbnail must be JPEG or PNG, strip or raster (no tiles), and no larger than 4096&nbsp;x&nbsp;4096; recommended size is 1024&nbsp;pixels on largest side; progressively encoded YCbCr&nbsp;4:2:0 is recommended but not mandatory for JPEG thumbnails.
+* Optional solid thumbnail in SubIFD 1 of IFD 1 (for multiresolution images) or each IFD (for other content). Thumbnail must be JPEG or PNG, strip or raster (no tiles), and no larger than 4096&nbsp;&#10005;&nbsp;4096; recommended size is 1024&nbsp;pixels on largest side; progressively encoded YCbCr&nbsp;4:2:0 is recommended but not mandatory for JPEG thumbnails.
 * Tiles must be JPEG or PNG compressed; JPEG here is meant to be the legacy JFIF specification (ITU Recommendation T.81&nbsp;: ISO/IEC 10918-1) as commonly used on the Internet and many software packages and operating systems, and as embodied by the popular Independent JPEG Group's libjpeg&nbsp;v6b specification of 1998. JPEG tiles must be packaged as standalone JFIF streams (see below). Note that two very common TIFF codecs, LZW and Deflate, are specifically disallowed in ZIF, as are raw uncoded images.
 * For JPEG tiles, the JPEG tables must be contained (duplicated) in every tile, such that each extracted tile is independently viewable.
 * For JPEG tiles, the JFIF APPn colorspace must be contained (duplicated) in every tile, such that each extracted tile is independently viewable. Note that implementations should ideally also support the Adobe APPn colorspace tag also for increased compatibility with JPEG codecs.
