@@ -23,12 +23,12 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 - Image Directory IFD&nbsp;1 is the whole base image, always interleaved and tiled
 - Tile size must be a multiple of 16 as per the TIFF&nbsp;6.0 specification Section&nbsp;15.
 
-| Zoom-able | Z-stackFocal | TimeSeries || Baseline | Advanced |
-| :---: | :---: | :---: || :---: | :---: |
-| &#10003; | - | &ndash; || &#10003; | &#10003; |
-| &ndash; | &#10003; | &ndash; || &#10003; | &#10003; |
-| &ndash; | &ndash; | &#10003; || &#10003; | &#10003; |
-| &ndash; | &ndash; | &#10003; || &#10003; | &#10003; |
+| Zoom-able | Z-stackFocal | TimeSeries | Baseline | Advanced |
+| :---: | :---: | :---: | :---: | :---: |
+| &#10003; | - | &ndash; | &#10003; | &#10003; |
+| &ndash; | &#10003; | &ndash; | &#10003; | &#10003; |
+| &ndash; | &ndash; | &#10003; | &#10003; | &#10003; |
+| &ndash; | &ndash; | &#10003; | &#10003; | &#10003; |
 
 ### Baseline Specification
 * Only tiled, 8-bit, 1- or 3-channel, interleaved monochrome or RGB images are supported; 
@@ -73,6 +73,23 @@ Any TIFF-compatible metadata tags are fine with ZIF. Some examples:
 - Tag 51159<sub>10</sub>: Objective/WSI/ZIF metadata
 - Tag 51160<sub>10</sub>: Objective/WSI/ZIF annotations
 
+#### TIFF  Make Registry
+TIFF_Tag Make, 271<sub>10</sub> (010F<sub>16</sub>), if present, contains the make/manufacturer of scanner or device used. Registered values are:
+| Value | Make | Website |
+| --- | :--- | :--- |
+| 0 | (unknown) | (none) |
+| 1 | Objective Pathology Services | http://www.objectivepathology.com |
+| 2 | Zoomify | http://www.zoomify.com |
+| 3 | Huron Digital Pathology | http://hurondigitalpathology.com |
+
+#### TIFF Tag Model Registry
+TIFF_Tag Model, 272<sub>10</sub> (0110<sub>16</sub>), if present, contains the model/type of scanner or device used. Registered values are:
+| Value | Make | Model |
+| --- | :--- | :--- |
+| 0 | (unknown) | (none) |
+| 1 - 7 | Objective Pathology Services | (reserved) |
+| 8 - 15 | Huron Digital Pathology | (reserved) |
+
 ### ZIF Generators
 * Adobe Photoshop plugin (possibly native)
 * ImageJ / Fiji
@@ -81,6 +98,7 @@ Any TIFF-compatible metadata tags are fine with ZIF. Some examples:
 * VIPS
 * Objective Converter
 * Zoomify Converter
+
 See http://iipimage.sourceforge.net/documentation/images.
 See http://libvips.blogspot.ca/2013/03/making-deepzoom-zoomify-and-google-maps.html.
 
