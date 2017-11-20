@@ -77,7 +77,7 @@ Any TIFF-compatible metadata tags are fine with ZIF. Some examples:
 TIFF_Tag Make, 271<sub>10</sub> (010F<sub>16</sub>), if present, contains the make/manufacturer of scanner, software, or device used. Registered values are:
 
 | Value | Make |
-| --- | :--- |
+| :---: | :--- |
 | 0 | (unknown) |
 | 1 | [Objective Pathology Services](http://www.objectivepathology.com) |
 | 2 | [Zoomify](http://www.zoomify.com) |
@@ -87,20 +87,20 @@ TIFF_Tag Make, 271<sub>10</sub> (010F<sub>16</sub>), if present, contains the ma
 TIFF_Tag Model, 272<sub>10</sub> (0110<sub>16</sub>), if present, contains the model/type of scanner or device used. Registered values are:
 
 | Value | Make | Model |
-| --- | :--- | :--- |
+| :---: | :--- | :--- |
 | 0 | (unknown or software-generated) | (none) |
-| 1 - 7 | [Objective Pathology Services](http://www.objectivepathology.com) | (reserved) |
-| 8 - 15 | [Huron Digital Pathology](http://hurondigitalpathology.com) | (reserved) |
+| 1 - 15 | [Objective Pathology Services](http://www.objectivepathology.com) | (reserved) |
+| 16 - 31 | [Huron Digital Pathology](http://hurondigitalpathology.com) | (reserved) |
 
 #### TIFF Tag Software Registry
 TIFF_Tag Software, 305<sub>10</sub> (0131<sub>16</sub>), if present, contains the output software used. Registered values are:
 
 | Value | Make | Model |
-| --- | :--- | :--- |
+| :---: | :--- | :--- |
 | 0 | (unknown or hardware-generated) | (none) |
-| 1 - 7 | [Objective Pathology Services](http://www.objectivepathology.com) | (reserved) |
-| 8 - 15 | [Zoomify](http://www.zoomify.com) | (reserved) |
-| 16 - 19 | [Huron Digital Pathology](http://hurondigitalpathology.com) | (reserved) |
+| 1 - 15 | [Objective Pathology Services](http://www.objectivepathology.com) | (reserved) |
+| 16 - 23 | [Zoomify](http://www.zoomify.com) | (reserved) |
+| 24 - 39 | [Huron Digital Pathology](http://hurondigitalpathology.com) | (reserved) |
 
 ### ZIF Generators
 * Adobe Photoshop plugin (possibly native)
