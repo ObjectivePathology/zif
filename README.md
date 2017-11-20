@@ -53,11 +53,11 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 - For dedicated/embedded applications, tiles may optionally be JPEG XT compressed (backwards-compatible with JPEG), still using compression code 7 (JPEG), but with the knowledge that not all implementations will have access to the additional detail that JPEG XT provides over JPEG.
 
 ### Typical Codings
-##### 3-channel 8-bit lossy "normal" single zoomable image
+#### 3-channel 8-bit lossy "normal" single zoomable image
 Code as Baseline, JPEG tiles (3-channel interleaved), using chain of top-level IFDs as decreasing resolution levels (pixels must be halving, rounded up)
-##### 3-channel 8-bit lossless "normal" single zoomable image
+#### 3-channel 8-bit lossless "normal" single zoomable image
 Code as Baseline, 24-bit PNG tiles (3-channel interleaved), using chain of top-level IFDs as decreasing resolution levels (pixels must be halving, rounded up)
-##### 3-channel 8-bit JPEG 2000 tiled single image
+#### 3-channel 8-bit JPEG 2000 tiled single image
 Note that this is *not* a true JPEG 2000 file
 Recommended: code as Advanced, JPEG 2000 tiles (3-channel interleaved), first top-level IFD contains base image, Sub-IFDs contain decreasing resolution levels
 Not recommended: code as Advanced, JPEG 2000 tiles (3-channel interleaved), using chain of top-level IFDs as decreasing resolution levels (pixels must be halving, rounded up)
@@ -79,9 +79,9 @@ TIFF_Tag Make, 271<sub>10</sub> (010F<sub>16</sub>), if present, contains the ma
 | Value | Make |
 | --- | :--- |
 | 0 | (unknown or software-generated) |
-| 1 | [Objective Pathology Services] (http://www.objectivepathology.com) |
-| 2 | [Zoomify] (http://www.zoomify.com) |
-| 3 | [Huron Digital Pathology] (http://hurondigitalpathology.com) |
+| 1 | [Objective Pathology Services](http://www.objectivepathology.com) |
+| 2 | [Zoomify](http://www.zoomify.com) |
+| 3 | [Huron Digital Pathology](http://hurondigitalpathology.com) |
 
 #### TIFF Tag Model Registry
 TIFF_Tag Model, 272<sub>10</sub> (0110<sub>16</sub>), if present, contains the model/type of scanner or device used. Registered values are:
@@ -89,8 +89,8 @@ TIFF_Tag Model, 272<sub>10</sub> (0110<sub>16</sub>), if present, contains the m
 | Value | Make | Model |
 | --- | :--- | :--- |
 | 0 | (unknown) | (none) |
-| 1 - 7 | Objective Pathology Services | (reserved) |
-| 8 - 15 | Huron Digital Pathology | (reserved) |
+| 1 - 7 | [Objective Pathology Services](http://www.objectivepathology.com)s | (reserved) |
+| 8 - 15 | [Huron Digital Pathology](http://hurondigitalpathology.com) | (reserved) |
 
 ### ZIF Generators
 * Adobe Photoshop plugin (possibly native)
