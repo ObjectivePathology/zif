@@ -23,7 +23,7 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 - Image Directory IFD&nbsp;1 is the whole base image, always interleaved and tiled
 - Tile size must be a multiple of 16 as per the TIFF&nbsp;6.0 specification Section&nbsp;15.
 
-| Zoom-able | Z-stackFocal | TimeSeries | Baseline | Advanced |
+| Zoomable | Z-stack<br>/ Focal | Time<br>Series | Baseline | Advanced |
 | :---: | :---: | :---: | :---: | :---: |
 | &#10003; | - | &ndash; | &#10003; | &#10003; |
 | &ndash; | &#10003; | &ndash; | &#10003; | &#10003; |
@@ -75,6 +75,7 @@ Any TIFF-compatible metadata tags are fine with ZIF. Some examples:
 
 #### TIFF  Make Registry
 TIFF_Tag Make, 271<sub>10</sub> (010F<sub>16</sub>), if present, contains the make/manufacturer of scanner or device used. Registered values are:
+
 | Value | Make | Website |
 | --- | :--- | :--- |
 | 0 | (unknown) | (none) |
@@ -84,6 +85,7 @@ TIFF_Tag Make, 271<sub>10</sub> (010F<sub>16</sub>), if present, contains the ma
 
 #### TIFF Tag Model Registry
 TIFF_Tag Model, 272<sub>10</sub> (0110<sub>16</sub>), if present, contains the model/type of scanner or device used. Registered values are:
+
 | Value | Make | Model |
 | --- | :--- | :--- |
 | 0 | (unknown) | (none) |
