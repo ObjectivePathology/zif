@@ -128,7 +128,7 @@ In future, open-source browser-based image viewers will be available here for co
 #### C/C++
 
 * [**libTIFF**](ftp://download.osgeo.org/libtiff) (web pages at [**Simple Systems**](http://www.simplesystems.org/libtiff) or [**MapTools**](http:/libtiff.maptools.org)); do NOT use obsolete libtiff.org.
-* [**AWare Systems](https://www.awaresystems.be/imaging/tiff/bigtiff.html)
+* [**AWare Systems**](https://www.awaresystems.be/imaging/tiff/bigtiff.html)
 * [**LeadTools**](https://www.leadtools.com/help/leadtools/v19/dh/to/l-topics-fileformatstiffandbigtifftaggedimagefileformat.html)
 * [**VintaSoft**](https://www.vintasoft.com/vsimaging-dotnet-index.html)
 * BigTIFF.org (original Aperio implementation, obsolete
