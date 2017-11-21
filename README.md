@@ -9,7 +9,7 @@ Essentially, ZIF is a subspecification of BigTIFF, departing substantially from 
 
 The ZIF file structure is such that it does not require an image server to deliver image views, although an image server can provide increased performance, cacheing, security, annotations, static views, dynamic transcoding, quality/bandwidth control, image adjustments, and many other features. Basic functionality requires only a web server capable of supporting byte serving via  [**IETF RFC 7233**](https://tools.ietf.org/html/rfc7233) Range Requests.
 
-The format was conceived and designed in 2012 by [**Objective Pathology Services Ltd**](http://www.objectivepathology.com)., and is maintained and supported in conjunction with [**Zoomify Inc**](http://zoomify.com), who provided initial development and real-world testing.
+The format was conceived and designed in 2012 by [**Objective Pathology Services Ltd**](http://www.objectivepathology.com)., and is maintained and supported in conjunction with [**Zoomify Inc**](http://zoomify.com)., who provided initial development and real-world testing.
 
 ZIF comes in two flavors: Baseline and Advanced. Baseline is intended for easy implementation and wide compatibility, while Advanced takes inspiration from the more comprehensive TIFF Extensions subset to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs. All forms of ZIF can be created and used with [**libTIFF**](http://simplesystems.org/libtiff)&nbsp;v.4.0 and later, and other libraries supporting BigTIFF.
 
