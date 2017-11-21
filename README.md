@@ -68,9 +68,9 @@ Not recommended: code as Advanced, JPEG 2000 tiles (3-channel interleaved), usin
 
 ### Metadata
 Any TIFF-compatible metadata tags are fine with ZIF. Some examples:
-- Tag 0x8769<sub>10</sub>: EXIF metadata
-- Tag 51159<sub>10</sub>: Objective/WSI/ZIF metadata
-- Tag 51160<sub>10</sub>: Objective/WSI/ZIF annotations
+- TIFF_Tag 34665<sub>10</sub> (8769<sub>16</sub>): EXIF Metadata
+- TIFF_Tag 51159<sub>10</sub> (C7D7<sub>16</sub>): Objective/WSI/ZIF metadata
+- TIFF_Tag 51160<sub>10</sub> (C7D8<sub>16</sub>): Objective/WSI/ZIF annotations
 
 #### TIFF Tag Make Registry
 TIFF_Tag Make, 271<sub>10</sub> (010F<sub>16</sub>), if present, contains the make/manufacturer of scanner, software, or device used. Registered values are:
