@@ -111,6 +111,7 @@ TIFF_Tag Software, 305<sub>10</sub> (0131<sub>16</sub>), if present, contains th
 * Zoomify Converter
 
 See http://iipimage.sourceforge.net/documentation/images.
+
 See http://libvips.blogspot.ca/2013/03/making-deepzoom-zoomify-and-google-maps.html.
 
 ### Image Viewers
@@ -126,8 +127,7 @@ In future, open-source browser-based image viewers will be available here for co
 
 #### C/C++
 
-libTIFF (at [**Simple Systems**](http://www.simplesystems.org/libtiff) or [**MapTools.org**](http:/libtiff.maptools.org))<br>
-do NOT use obsolete libtiff.org.
+[**libTIFF**](ftp://download.osgeo.org/libtiff) (FTP link; web pages at [**Simple Systems**](http://www.simplesystems.org/libtiff) or [**MapTools**](http:/libtiff.maptools.org)); do NOT use obsolete libtiff.org.
 [BigTIFF.org](http://www.bigtiff.org) (original Aperio implementation, now at Leice; obsolete)
 
 ### APIs
