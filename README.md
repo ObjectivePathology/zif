@@ -9,9 +9,9 @@ Essentially, ZIF is a subspecification of BigTIFF, departing substantially from 
 
 The ZIF file structure is such that it does not require an image server to deliver image views, although an image server can provide increased performance, cacheing, security, annotations, static views, dynamic transcoding, quality/bandwidth control, image adjustments, and many other features. Basic functionality requires only a web server capable of supporting byte-range requests per [RFC 7233](https://tools.ietf.org/html/rfc7233).
 
-The format was conceived and developed in 2015 by [**Objective Pathology Services Ltd**](http://www.objectivepathology.com). and maintained and supported in conjunction with [**Zoomify Inc**](http://zoomify.com).
+The format was conceived and designed in 2012 by [**Objective Pathology Services Ltd**](http://www.objectivepathology.com)., and is maintained and supported in conjunction with [**Zoomify Inc**](http://zoomify.com), who provided initial development and real-world testing.
 
-ZIF comes in two flavors, Baseline and Advanced; Baseline is intended for easy implementation and wide compatibility, while Advanced takes inspiration from the more comprehensive TIFF Extensions subset to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs. All forms of ZIF can be manipulated with [libTIFF](http://simplesystems.org/libtiff)&nbsp;v.4.0 (circa 2011) and other libraries supporting BigTIFF.
+ZIF comes in two flavors: Baseline and Advanced. Baseline is intended for easy implementation and wide compatibility, while Advanced takes inspiration from the more comprehensive TIFF Extensions subset to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs. All forms of ZIF can be manipulated with [libTIFF](http://simplesystems.org/libtiff)&nbsp;v.4.0 (circa 2011) and other libraries supporting BigTIFF.
 
 ### Why no "standard" TIFF 6.0 support?
 Since all zoomable images require tiles, many zoomable images are larger than the 64K&nbsp;&#10005;&nbsp;64K, 4&nbsp;GB TIFF&nbsp;6.0 limits, and since for browser interoperability either JPEG or PNG codecs not supported by baseline TIFF are required, even with a 32-bit TIFF&nbsp;6.0 Part&nbsp;2 implementation almost no existing software could read or write most images anyway; so to keep ZIF implementations simple and future-focused, only BigTIFF containers are permitted.
@@ -64,7 +64,6 @@ Not recommended: code as Advanced, JPEG 2000 tiles (3-channel interleaved), usin
 
 ### Recommendations
 - All tile IFDs should be, but need not be, located sequentially in a block at the beginning of the file.
-- The size of the IFD block is readable by **?????**
 - note that standards-compliant JPEG 2000 Compression is value 34712<sub>10</sub> (8798<sub>16</sub>) with PhotometricInterpretation of either (YCbCr) or (RCT). Aperio.svs files also use 33003<sub>10</sub> (80EB<sub>16</sub>) for YCbCr from Matrox libraries, or 33005<sub>10</sub> (80ED<sub>16</sub>) for RGB/RCT from Kakadu libraries. Both of these are not standards-compliant, and may not be used in in any ZIF files. Note that PhotometricInterpretation of JPEG 2000 data is not defined in the TIFF specifications.
 
 ### Metadata
