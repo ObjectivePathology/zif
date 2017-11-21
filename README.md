@@ -127,8 +127,8 @@ In future, open-source browser-based image viewers will be available here for co
 
 #### C/C++
 
-[**libTIFF**](ftp://download.osgeo.org/libtiff) (FTP link; web pages at [**Simple Systems**](http://www.simplesystems.org/libtiff) or [**MapTools**](http:/libtiff.maptools.org)); do NOT use obsolete libtiff.org.
-[BigTIFF.org](http://www.bigtiff.org) (original Aperio implementation, now at Leice; obsolete)
+[**libTIFF**](ftp://download.osgeo.org/libtiff) (web pages at [**Simple Systems**](http://www.simplesystems.org/libtiff) or [**MapTools**](http:/libtiff.maptools.org)); do NOT use obsolete libtiff.org.
+[BigTIFF.org](http://www.bigtiff.org) (original Aperio implementation, obsolete)
 
 ### APIs
 
