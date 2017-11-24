@@ -18,13 +18,24 @@ $link-color: red;
 
 body {
   color: #223344;
-  width: 75%;
 }
 
 section .page-header {
-  display: none
+  display: none;
 }
 
-h1 {
-  color: green;
+section .main-content {
+  min-width: 320px;
+  width: 75%;
+  max-width: 640px;
 }
+
+h2 {
+  color: #336699;
+}
+
+h3 {
+  color: #3399FF;
+}
+
+
