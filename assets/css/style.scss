@@ -16,22 +16,24 @@ body {
   color: #223344;
 }
 
-section .page-header {
+body section .page-header {
   display: none;
 }
 
-.main-content section {
+.main-content {
   min-width: 320px;
   width: 75%;
   max-width: 1920px;
 }
 
-.main-content h2 {
+body section .main-content h2 {
   color: #336699;
+  color: red;
 }
 
 .main-content h3 {
   color: #2266AA;
+  color: green;
 }
 
 .main-content p {
