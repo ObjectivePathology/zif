@@ -1,5 +1,6 @@
 <img src="ZIF.svg" width="216" height="126">
 
+# ZIF : the Zoomable Image File Format
 ## ZIF : the Zoomable Image File Format
 
 ### Description
@@ -46,7 +47,7 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 
 ### Baseline Examples
 
-<img class="center" src="Diagram.svgx" alt="MISSING IMAGE - please update your browser">
+<img class="center" src="Diagram.svg" alt="MISSING IMAGE - please update your browser">
 
 ### Advanced Specification
 - In addition to JPEG or PNG, tiles may be JPEG XR compressed (targeting Microsoft Edge and IE 9+ browsers), or JPEG 2000 compressed (targeting Apple Safari and WebKit browsers). Note that with JPEG XR and JPEG 2000, server-based transcoding may be required for universal browser compatibility, and are intended for LAN-based applications rather than the public Internet.
