@@ -13,6 +13,7 @@ $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 @import "{{ site.theme }}";
 
 body {
+  font-family: $sans-serif;
   color: #333333;
 }
 
