@@ -2,7 +2,6 @@
 ---
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
-@import url('https://fonts.googleapis.com/css?family=Hind');
 
 @font-face {
 }
@@ -34,13 +33,12 @@ h2 {
   color: #336699;
 }
 
-h3 {
+h3 .main-content {
   color: #3399FF;
 }
 
 p {
-  font-family: "Hind", serif;
-  color: red;
+  font-family: "Noto Sans", $sans-serif;
 }
 
 
