@@ -35,13 +35,11 @@ body {
 }
 
 .main-content p {
-  font-family: "Noto Sans", $sans-serif;
+  font-family: "Noto Sansx", $sans-serif;
 }
 
-.main-content img {
+.main-content img .center {
   display: block;
   margin: 0 auto;
-  text-align: center;
-  background: red;
 }
 
