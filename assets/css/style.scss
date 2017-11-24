@@ -29,7 +29,7 @@ section .main-content {
   max-width: 1920px;
 }
 
-h2 {
+.main-content h2 {
   color: #336699;
 }
 
@@ -41,4 +41,7 @@ p {
   font-family: "Noto Sans", $sans-serif;
 }
 
+img {
+  margin: 0 auto;
+}
 
