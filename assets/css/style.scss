@@ -27,7 +27,7 @@ body {
   max-width: 1280px;
 }
 
-.main-content h1 {
+h1 {
   color: #66AA22;
 }
 
@@ -45,6 +45,10 @@ body {
 
 .main-content img .center {
   display: block;
+  margin: 0 auto;
+}
+
+table {
   margin: 0 auto;
 }
 
