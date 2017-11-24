@@ -2,9 +2,13 @@
 ---
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import url('https://fonts.googleapis.com/css?family=Hind');
+
+@font-face {
+}
 
 $serif      : Georgia, Times, serif;
-$sans-serif : "Noto Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
+$sans-serif : "Hind", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
 $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
 $section-headings-color: #3399FF;
