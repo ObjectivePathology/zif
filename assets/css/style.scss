@@ -7,8 +7,7 @@ $serif      : Georgia, Times, serif;
 $sans-serif : "Noto Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
 $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
-//$section-headings-color: #3399FF;
-//$link-color: red;
+$link-color : #2266AA;
 
 @import "{{ site.theme }}";
 
@@ -37,10 +36,6 @@ body {
 
 .main-content h3 {
   color: #2266AA;
-}
-
-.main-content p {
-  //font-family: $sans-serif;
 }
 
 .main-content img .center {
