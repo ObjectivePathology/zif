@@ -27,7 +27,7 @@ section .page-header {
 section .main-content {
   min-width: 320px;
   width: 75%;
-  max-width: 640px;
+  max-width: 1920px;
 }
 
 h2 {
@@ -36,6 +36,11 @@ h2 {
 
 h3 {
   color: #3399FF;
+}
+
+p {
+  font-family: "Hind", serif;
+  color: red;
 }
 
 
