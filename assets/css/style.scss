@@ -3,11 +3,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
-@font-face {
-}
-
 $serif      : Georgia, Times, serif;
-$sans-serif : "Hind", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
+$sans-serif : "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
 $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
 $section-headings-color: #3399FF;
@@ -19,11 +16,11 @@ body {
   color: #223344;
 }
 
-section .page-header {
+.page-header section {
   display: none;
 }
 
-section .main-content {
+.main-content section {
   min-width: 320px;
   width: 75%;
   max-width: 1920px;
@@ -33,15 +30,15 @@ section .main-content {
   color: #336699;
 }
 
-h3 .main-content {
-  color: #3399FF;
+.main-content h3 {
+  color: #2266AA;
 }
 
-p {
+.main-content p {
   font-family: "Noto Sans", $sans-serif;
 }
 
-img {
+.main-content img {
   margin: 0 auto;
 }
 
