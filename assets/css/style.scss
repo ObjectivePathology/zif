@@ -13,7 +13,7 @@ $link-color : #2266AA;
 
 body {
   font-family: $sans-serif;
-  color: #333366;
+  color: #555555;
 }
 
 .page-header {
@@ -43,7 +43,7 @@ body {
 img .center {
   display: block;
   margin: 0 auto;
-  border: 1px;
+  border: 1px solid;
 }
 
 .main-content table {
