@@ -17,5 +17,14 @@ $link-color: red;
 @import "{{ site.theme }}";
 
 body {
-  color: #666666;
+  color: #223344;
+  width: 75%;
+}
+
+section .page-header {
+  display: none
+}
+
+h1 {
+  color: green;
 }
