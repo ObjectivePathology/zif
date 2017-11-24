@@ -1,17 +1,17 @@
 ---
 ---
 
-// See https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
 $serif      : Georgia, Times, serif;
-$sans-serif : -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$sans-serif : "Noto Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
 $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
-$section-headings-color: #FF0000;  // make blue later
-$link-color: purple;
+$section-headings-color: #3399FF;
+$link-color: red;
 
 @import "{{ site.theme }}";
 
 body {
-  color: red;
+  color: #666666;
 }
