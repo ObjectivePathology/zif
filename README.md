@@ -44,6 +44,10 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 * For JPEG tiles, TIFF tag 259<sub>10</sub> (0103<sub>16</sub>): Compression must be 7 (JPEG), and TIFF tag 262<sub>10</sub> (0106<sub>16</sub>): PhotometricInterpretation must be RGB or YCbCr for 3-channel images, or grayscale for 1-channel monochrome images. Channel subsampling of either 4:4:4 or 4:2:0 is permitted for YCbCr colorspace; RGB colorspace must be 4:4:4 subsampled.
 * PNG tiles need a tile compression code in tag 259<sub>10</sub> (0103<sub>16</sub>): Compression of 34933<sub>10</sub>. 24-bit true-color PNGs are recommended; although palettized PNGs are permitted they are highly discouraged.
 
+### Baseline Examples
+
+<img src="Diagram.svg" alt="MISSING IMAGE - please update your browser">
+
 ### Advanced Specification
 - In addition to JPEG or PNG, tiles may be JPEG XR compressed (targeting Microsoft Edge and IE 9+ browsers), or JPEG 2000 compressed (targeting Apple Safari and WebKit browsers). Note that with JPEG XR and JPEG 2000, server-based transcoding may be required for universal browser compatibility, and are intended for LAN-based applications rather than the public Internet.
 - For JPEG tiles, TIFF tag PhotometricInterpretation may additionally be RGB, in which case no channel subsampling is permitted.
