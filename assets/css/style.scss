@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
 $serif      : Georgia, Times, serif;
-$sans-serif : "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
+$sans-serif : "Noto Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
 $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
 //$section-headings-color: #3399FF;
@@ -26,16 +26,20 @@ body {
   max-width: 1280px;
 }
 
+.main-content h1 {
+  color: #66AA22;
+}
+
 .main-content h2 {
   color: #3399FF;
 }
 
 .main-content h3 {
-  color: #2266AA;
+  color: #22AA66;
 }
 
 .main-content p {
-  font-family: "Noto Sansx", $serif;
+  font-family: $sans-serif;
 }
 
 .main-content img .center {
