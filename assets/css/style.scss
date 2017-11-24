@@ -7,13 +7,13 @@ $serif      : Georgia, Times, serif;
 $sans-serif : "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
 $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
-$section-headings-color: #3399FF;
-$link-color: red;
+//$section-headings-color: #3399FF;
+//$link-color: red;
 
 @import "{{ site.theme }}";
 
 body {
-  color: #223344;
+  color: #333333;
 }
 
 .page-header {
@@ -40,5 +40,6 @@ body {
 
 .main-content img {
   margin: 0 auto;
+  text-align: center;
 }
 
