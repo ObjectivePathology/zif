@@ -9,7 +9,7 @@ $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
 $link-color : #2266AA;
 
-@import "{{ site.theme }}";
+//@import "{{ site.theme }}";
 
 body {
   font-family: $sans-serif;
