@@ -7,7 +7,7 @@
 
 Essentially, ZIF is a subspecification of BigTIFF, departing substantially from the TIFF 6.0 Baseline and TIFF 6.0 Part 2: TIFF Extensions specifications, adding support for very large images and web browser image codecs, to enable serverless delivery of images to modern web browsers and other network client applications, while still being interoperable with the popular [**libTIFF**](http://www.simplesystems.org/libtiff) imaging library.
 
-The ZIF file structure is such that it does not require an image server to deliver image views, although an image server can provide increased performance, cacheing, security, annotations, static views, dynamic transcoding, quality/bandwidth control, image adjustments, and many other features. Basic functionality requires only a web server capable of supporting byte serving via [**IETF RFC 7233**](https://tools.ietf.org/html/rfc7233) Range Requests.
+The ZIF file structure is such that it does not require an image server to deliver image views, although an image server can provide increased performance, cacheing, security, annotations, static views, dynamic transcoding, quality/bandwidth control, image adjustments, and many other features. Basic functionality requires only a web server capable of supporting byte serving via [**IETF RFC 7233**](https://tools.ietf.org/html/rfc7233) Range Requests, and a small JavaScript library.
 
 The format was conceived and designed in 2012 by [**Objective Pathology Services Ltd**](http://www.objectivepathology.com)., and is maintained and supported in conjunction with [**Zoomify Inc**](http://zoomify.com)., who provided initial development and real-world testing. ZIF is a modern standards-based reworking of a concept initially introduced by Zoomify in 2000 as the PFF file format.
 
@@ -75,6 +75,8 @@ Any TIFF-compatible metadata tags are fine with ZIF. Some examples:
 - TIFF_Tag 34665<sub>10</sub> (8769<sub>16</sub>): EXIF Metadata
 - TIFF_Tag 51159<sub>10</sub> (C7D7<sub>16</sub>): Objective/WSI/ZIF metadata
 - TIFF_Tag 51160<sub>10</sub> (C7D8<sub>16</sub>): Objective/WSI/ZIF annotations
+
+ZIF will incorporate the [Metadata Working Group](http://www.metadataworkinggroup.com) [Specifications](http://www.metadataworkinggroup.com/specs).
 
 ### TIFF Tag Make Registry
 TIFF_Tag Make, 271<sub>10</sub> (010F<sub>16</sub>), if present, contains the make/manufacturer of scanner, software, or device used. Registered values are:
