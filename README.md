@@ -136,7 +136,7 @@ In future, open-source browser-based image viewers will be available here for co
 * [**AWare Systems**](https://www.awaresystems.be/imaging/tiff/bigtiff.html)
 * [**LeadTools**](https://www.leadtools.com/help/leadtools/v19/dh/to/l-topics-fileformatstiffandbigtifftaggedimagefileformat.html)
 * [**VintaSoft**](https://www.vintasoft.com/vsimaging-dotnet-index.html)
-* BigTIFF.org (original Aperio implementation, obsolete
+* BigTIFF.org (original Aperio implementation, obsolete)
 
 ## APIs
 
