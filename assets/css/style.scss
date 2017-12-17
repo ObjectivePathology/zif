@@ -34,16 +34,16 @@
 
 @font-face {
     font-family: "TT Teds";
-    src: url('/ttteds_regular.woff2') format('woff2'),
-         url('/ttteds_regular.woff') format('woff');
+    src: url('/tt-teds-regular.woff2') format('woff2'),
+         url('/tt-teds-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "TT Travels";
-    src: url('/tttravelss_regular.woff2') format('woff2'),
-         url('/tttravels_regular.woff') format('woff');
+    src: url('/tt_travelss_regular.woff2') format('woff2'),
+         url('/tt_travels_regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -52,6 +52,15 @@
     font-family: "Bunday Sans";
     src: url('/bunday_sans_regular.woff2') format('woff2'),
          url('/bunday_sans_regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Molde";
+    src: url('/molde_regular.woff2') format('woff2'),
+         url('/molde_regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
