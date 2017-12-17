@@ -16,6 +16,47 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Core Sans NR 35";
+    src: url('/CoreSansNR35.woff2') format('woff2'),
+         url('/CoreSansNR35.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Core Sans NR 45";
+    src: url('/CoreSansNR45.woff2') format('woff2'),
+         url('/CoreSansNR45.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TT Teds";
+    src: url('/ttteds_regular.woff2') format('woff2'),
+         url('/ttteds_regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TT Travels";
+    src: url('/tttravelss_regular.woff2') format('woff2'),
+         url('/tttravels_regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bunday Sans";
+    src: url('/bunday_sans_regular.woff2') format('woff2'),
+         url('/bunday_sans_regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 $serif      : Georgia, Times, serif;
 $sans-serif : "Core Sans NR 45", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
