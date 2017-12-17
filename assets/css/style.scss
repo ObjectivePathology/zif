@@ -52,7 +52,7 @@
 }
 
 @font-face {
-    font-family: "TT Teds";
+    font-family: "Molde";
     src: url('/molde-regular.woff2') format('woff2'),
          url('/molde-regular.woff') format('woff');
     font-weight: normal;
@@ -62,7 +62,7 @@
 
 
 $serif      : Georgia, Times, serif;
-$sans-serif : "Molde", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
+$sans-serif : "Bunday Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
 $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
 $link-color : #2266AA;
