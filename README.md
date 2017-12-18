@@ -1,6 +1,7 @@
 <img src="ZIF.svg" width="216" height="126">
 
 # The Zoomable Image File Format
+# The Tagged Image File Format
 
 **ZIF**, the **Zoomable Image File format**, alternatively also known as the **Zoomify Image File format**, is an open-source, web-friendly, multi-resolution, pyramidal tiled file format, based on TIFF, designed to enable interactive panning and zooming of extremely large images, especially over the World Wide Web and other Internet services.
 
@@ -13,7 +14,7 @@ The format was conceived and designed in 2012 by [**Objective Pathology Services
 ZIF comes in two flavors: Baseline and Advanced. Baseline is intended for easy implementation and wide compatibility, while Advanced takes inspiration from the more comprehensive TIFF Extensions subset to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs. All forms of ZIF can be created and used with [**libTIFF**](http:/libtiff.maptools.org)&nbsp;v.4.0 and later, and other libraries supporting BigTIFF.
 
 ## Why is there no "standard" TIFF 6.0 support in ZIF?
-Since all zoomable images require tiles, many zoomable images are larger than the 64K&nbsp;&#10005;&nbsp;64K, 4&nbsp;GB TIFF&nbsp;6.0 limits, and since for browser interoperability either JPEG or PNG codecs unsupported by baseline TIFF are required, even with a 32-bit TIFF&nbsp;6.0 Part&nbsp;2 zooming implementation almost no existing software could read or write most images anyway; so to keep ZIF implementations simple and future-focused, only BigTIFF containers are permitted.
+Since all zoomable images require tiles, many zoomable images are larger than the 64Kx64K, 4&nbsp;GB TIFF&nbsp;6.0 limits, and since for browser interoperability either JPEG or PNG codecs unsupported by baseline TIFF are required, even with a 32-bit TIFF&nbsp;6.0 Part&nbsp;2 zooming implementation almost no existing software could read or write most images anyway; so to keep ZIF implementations simple and future-focused, only BigTIFF containers are permitted.
 
 ##  Common Specifications, Baseline and Advanced
 - no strips/rasters, planar configuration, alpha channel, higher bit depths, etc. ZIF Baseline is intended only for common, monitor-displayable images, 8-bit, monochrome or RGB.
