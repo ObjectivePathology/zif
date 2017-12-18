@@ -1,3 +1,17 @@
+## ZIF Generators
+* Adobe Photoshop plugin (possibly native)
+* ImageJ / Fiji
+* GIMP
+* ImageMagick
+* VIPS
+* Objective Converter
+* Zoomify Converter
+
+See http://iipimage.sourceforge.net/documentation/images.
+
+See http://libvips.blogspot.ca/2013/03/making-deepzoom-zoomify-and-google-maps.html.
+
+
 ## APIs
 
 In addition to raw ZIF byte-served access, server APIs will include:
