@@ -11,6 +11,14 @@ See http://iipimage.sourceforge.net/documentation/images.
 
 See http://libvips.blogspot.ca/2013/03/making-deepzoom-zoomify-and-google-maps.html.
 
+## Image Viewers
+In future, open-source browser-based image viewers will be available here for collaborative development:
+* Full viewer in JavaScript/CoffeeScript, with S3.js
+* Leaflet/Mapbox plugin
+* Google Maps plugin
+* OpenLayers 3 plugin
+* Modest Maps plugin
+* Polymaps plugin
 
 ## APIs
 
