@@ -1,7 +1,7 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,600,600i');
 
 @font-face {
     font-family: "Core Sans A";
@@ -62,7 +62,7 @@
 
 
 $serif      : Georgia, Times, serif;
-$sans-serif : "Core Sans NR 45", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
+$sans-serif : "Noto Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
 $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
 $link-color : #2266AA;
@@ -82,7 +82,8 @@ body {
   min-width: 640px;
   width: 80%;
   max-width: 1280px;
-  font-size: 18px; // can scale this in vw, vh units later
+  font-size: 20px; // can scale this in vw, vh units later
+  font-weight: 300;
   line-height: 28px;
 }
 
