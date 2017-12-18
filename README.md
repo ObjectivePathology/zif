@@ -1,6 +1,6 @@
 <img src="ZIF.svg" width="216" height="126">
 
-# The Zoomable Image <wbr> File Format
+# <span>The Zoomable Image</span> <span>File Format</span>
 # Zoomable Image <wbr> File Format
 # Tagged Image <wbr> File Format
 # The Tagged Image <wbr> File Format
