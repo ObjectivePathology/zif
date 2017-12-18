@@ -98,16 +98,16 @@
 
 @font-face {
     font-family: "Favela";
-    src: url('/favela-light.woff2') format('woff2'),
-         url('/favela-light.woff') format('woff');
+    src: url('/favela-regular.woff2') format('woff2'),
+         url('/favela-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Favela";
-    src: url('/favela-light-italic.woff2') format('woff2'),
-         url('/favela-light-italic.woff') format('woff');
+    src: url('/favela-italic.woff2') format('woff2'),
+         url('/favela-italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
@@ -130,7 +130,7 @@
 
 
 $serif      : Georgia, Times, serif;
-$sans-serif : "Favela", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
+$sans-serif : "Core Sans NR", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
 $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
 $link-color : #2266AA;
@@ -156,12 +156,14 @@ body {
 
 .main-content h1 {
   color: #66AA22;
+  font-family: "Favela"
   font-weight: bold;
 }
 
 .main-content h2 {
   color: #3399FF;
-  //font-weight: 500;
+  font-family: "Favela"
+  font-weight: normal;
 }
 
 .main-content h3 {
