@@ -96,10 +96,26 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Favela";
+    src: url('/favela-regular.woff2') format('woff2'),
+         url('/favela-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Favela";
+    src: url('/favela-semibold.woff2') format('woff2'),
+         url('/favela-semibold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
 
 
 $serif      : Georgia, Times, serif;
-$sans-serif : "Publica Play", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
+$sans-serif : "Favela", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
 $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
 $link-color : #2266AA;
