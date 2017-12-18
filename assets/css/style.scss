@@ -12,6 +12,13 @@
 
 @font-face {
     font-family: "Noto Sans";
+    src: url('/NotoSans-Medium.ttf') format('truetype');
+    font-weight: 550;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans";
     src: url('/NotoSans-SemiBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
@@ -107,6 +114,7 @@ body {
 
 .main-content h2 {
   color: #3399FF;
+  font-weight: 550;
 }
 
 .main-content h3 {
