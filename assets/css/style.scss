@@ -100,6 +100,7 @@ a {
     color: #2266AA;
     &:hover {
         color: #3399FF;
+        color: #66AA22; // trying
     }
 }
 
@@ -109,8 +110,8 @@ a {
 
 .main-content {
   min-width: 640px;
-  width: 80%;
-  //width: calc(640px + 50vw);
+  //width: 80%;
+  width: calc(640px + 50vw);
   //max-width: 80%;
   font-size: 18px;
   line-height: 1.5;
