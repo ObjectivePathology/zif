@@ -41,27 +41,35 @@
 }
 
 @font-face {
-    font-family: "Core Sans A";
-    src: url('/CoreSansA45.woff2') format('woff2'),
-         url('/CoreSansA45.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Core Sans NR 35";
-    src: url('/coresansnr35.woff2') format('woff2'),
-         url('/coresansnr35.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Core Sans NR 45";
+    font-family: "Core Sans NR";
     src: url('/coresansnr45.woff2') format('woff2'),
          url('/coresansnr45.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: "Core Sans NR";
+    src: url('/coresansnr45.woff2') format('woff2'),
+         url('/coresansnr45.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Core Sans NR";
+    src: url('/coresansnr45.woff2') format('woff2'),
+         url('/coresansnr45.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Core Sans NR";
+    src: url('/coresansnr45.woff2') format('woff2'),
+         url('/coresansnr45.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
 }
 
 @font-face {
