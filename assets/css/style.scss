@@ -100,7 +100,10 @@ body {
 }
 
 .main-content {
-  width: 640px + 50vw;
+  min-width: 640px;
+  width: 80%;
+  width: calc(640px + 50vw);
+  max-width: 80%;
   font-size: 18px; // can scale this in vw, vh units later
   line-height: 1.5;
 }
