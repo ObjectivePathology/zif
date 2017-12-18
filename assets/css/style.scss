@@ -91,7 +91,7 @@ $link-color : #2266AA;
 @import "{{ site.theme }}";
 
 body {
-  width: 100%;
+  //width: 100%;
   font-size: 18px; // can scale this in vw, vh units later
   font-family: $sans-serif;
   color: #333333;
@@ -102,7 +102,7 @@ body {
 }
 
 .main-content {
-  width: 640px + (1vw / 2);
+  width: 640px + 50vw;
   line-height: 1.5;
 }
 
