@@ -25,17 +25,17 @@
 }
 
 @font-face {
-    font-family: "Aguda";
-    src: url('/aguda_regular.woff2') format('woff2'),
-         url('/aguda_regular.woff') format('woff');
+    font-family: "Publica Play";
+    src: url('/publicaplay_regular.woff2') format('woff2'),
+         url('/publicaplay_regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Aguda";
-    src: url('/aguda_black.woff2') format('woff2'),
-         url('/aguda_black.woff') format('woff');
+    font-family: "Publica Play";
+    src: url('/publicaplay_black.woff2') format('woff2'),
+         url('/publicaplay_black.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -99,7 +99,7 @@
 
 
 $serif      : Georgia, Times, serif;
-$sans-serif : "Aguda", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
+$sans-serif : "Publica Play", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
 $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
 $link-color : #2266AA;
