@@ -3,8 +3,8 @@
 
 @font-face {
     font-family: "Publica Play";
-    src: url('/coresansnr45.woff2') format('woff2'),
-         url('/coresansnr45.woff') format('woff');
+    src: url('/publicaplay-regular.woff2') format('woff2'),
+         url('/publicaplay-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -110,14 +110,14 @@ body {
 
 .main-content h1 {
   color: #66AA22;
-  font-family: "Favela";
+  font-family: "Publica Play";
   font-weight: bold;
   line-height: 1.25;
 }
 
 .main-content h2 {
   color: #3399FF;
-  font-family: "Favela";
+  font-family: "Publica Play";
   font-weight: normal;
   line-height: 1.25;
 }
