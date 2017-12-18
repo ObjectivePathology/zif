@@ -1,29 +1,6 @@
 ---
 ---
 
-// @import url('https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,600,600i');
-
-@font-face {
-    font-family: "Noto Sans";
-    src: url('/NotoSans-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Noto Sans";
-    src: url('/NotoSans-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Noto Sans";
-    src: url('/NotoSans-SemiBold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
 @font-face {
     font-family: "Publica Play";
     src: url('/coresansnr45.woff2') format('woff2'),
@@ -73,38 +50,6 @@
 }
 
 @font-face {
-    font-family: "TT Teds";
-    src: url('/tt-teds-regular.woff2') format('woff2'),
-         url('/tt-teds-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "TT Travels";
-    src: url('/tt_travels_regular.woff2') format('woff2'),
-         url('/tt_travels_regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Bunday Sans";
-    src: url('/bundaysans-regular.woff2') format('woff2'),
-         url('/bundaysans-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Molde";
-    src: url('/molde-regular.woff2') format('woff2'),
-         url('/molde-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: "Favela";
     src: url('/favela-regular.woff2') format('woff2'),
          url('/favela-regular.woff') format('woff');
@@ -146,6 +91,9 @@ $link-color : #2266AA;
 @import "{{ site.theme }}";
 
 body {
+  width: 1280px;
+  width: 640px + vw / 2;
+  font-size: 18px; // can scale this in vw, vh units later
   font-family: $sans-serif;
   color: #333333;
 }
@@ -155,11 +103,6 @@ body {
 }
 
 .main-content {
-  min-width: 640px;
-  width: 80%;
-  max-width: 1280px;
-  max-width: 640px + vw / 2;
-  font-size: 18px; // can scale this in vw, vh units later
   line-height: 1.5;
 }
 
@@ -167,12 +110,14 @@ body {
   color: #66AA22;
   font-family: "Favela";
   font-weight: bold;
+  line-height: 1.25;
 }
 
 .main-content h2 {
   color: #3399FF;
   font-family: "Favela";
   font-weight: normal;
+  line-height: 1.25;
 }
 
 .main-content h3 {
