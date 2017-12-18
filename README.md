@@ -12,7 +12,7 @@ The format was conceived and designed in 2012 by [**Objective Pathology Services
 
 ZIF comes in two flavors: Baseline and Advanced. Baseline is intended for easy implementation and wide compatibility, while Advanced takes inspiration from the more comprehensive TIFF Extensions subset to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs. All forms of ZIF can be created and used with [**libTIFF**](http:/libtiff.maptools.org)&nbsp;v.4.0 and later, and other libraries supporting BigTIFF.
 
-## Why no "standard" TIFF 6.0 support?
+## Why is there no "standard" TIFF 6.0 support in ZIF?
 Since all zoomable images require tiles, many zoomable images are larger than the 64K&nbsp;&#10005;&nbsp;64K, 4&nbsp;GB TIFF&nbsp;6.0 limits, and since for browser interoperability either JPEG or PNG codecs unsupported by baseline TIFF are required, even with a 32-bit TIFF&nbsp;6.0 Part&nbsp;2 zooming implementation almost no existing software could read or write most images anyway; so to keep ZIF implementations simple and future-focused, only BigTIFF containers are permitted.
 
 ##  Common Specifications, Baseline and Advanced
@@ -20,7 +20,7 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 - Start bytes "II" - little-endian only, "MM" not permitted.
 - Version 002B<sub>16</sub> for BigTIFF only, never TIFF&nbsp;6.0 002A<sub>16</sub>
 - Image Directory IFD&nbsp;1 is the whole base image, always interleaved and tiled
-- Tile size must be a multiple of 16 as per the TIFF&nbsp;6.0 specification Section&nbsp;15.
+- Tile size must be a multiple of 16 as per the TIFF&nbsp;6.0 specification Section&nbsp;15. Square tiles of 512&nbsp;&#10005;&nbsp;512 pixels are highly recommended, but not mandatory.
 
 | Zoomable | Z-stack<br>/ Focal | Time<br>Series | Baseline | Advanced |
 | :---: | :---: | :---: | :---: | :---: |
@@ -105,19 +105,6 @@ TIFF_Tag Software, 305<sub>10</sub> (0131<sub>16</sub>), if present, contains th
 | 1 - 15 | [Objective Pathology Services](http://www.objectivepathology.com) | (reserved) |
 | 16 - 23 | [Zoomify](http://www.zoomify.com) | (reserved) |
 | 24 - 39 | [Huron Digital Pathology](http://hurondigitalpathology.com) | (reserved) |
-
-## ZIF Generators
-* Adobe Photoshop plugin (possibly native)
-* ImageJ / Fiji
-* GIMP
-* ImageMagick
-* VIPS
-* Objective Converter
-* Zoomify Converter
-
-See http://iipimage.sourceforge.net/documentation/images.
-
-See http://libvips.blogspot.ca/2013/03/making-deepzoom-zoomify-and-google-maps.html.
 
 ## Image Viewers
 In future, open-source browser-based image viewers will be available here for collaborative development:
