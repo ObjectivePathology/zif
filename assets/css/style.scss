@@ -91,7 +91,7 @@ $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 @import "{{ site.theme }}";
 
 body {
-  width: 100%;
+  //width: 100%;
   font-family: $sans-serif;
   color: #333333;
 }
@@ -112,7 +112,7 @@ a {
   min-width: 640px;
   //width: 80%;
   width: calc(640px + 50vw);
-  //max-width: 80%;
+  max-width: auto;
   font-size: 18px;
   line-height: 1.5;
 }
