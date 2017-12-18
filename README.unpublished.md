@@ -36,7 +36,7 @@ Serialization formats:
 * Avro
 * Base64/JSON – strings and ArrayBuffers
 * don’t forget data can be delivered gzipped…
-* HmlHttpRequest2 supports ArrayBuffers, Blobs, and FormData
+* HtmlHttpRequest2 supports ArrayBuffers, Blobs, and FormData
 
 
 ## Client Libraries
