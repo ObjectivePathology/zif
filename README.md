@@ -1,9 +1,6 @@
 <img src="ZIF.svg" width="216" height="126">
 
 # <span>The Zoomable Image </span><wbr><span> File Format</span>
-# Zoomable Image <wbr> File Format
-# Tagged Image <wbr> File Format
-# The Tagged Image <wbr> File Format
 
 **ZIF**, the **Zoomable Image File format**, alternatively also known as the **Zoomify Image File format**, is an open-source, web-friendly, multi-resolution, pyramidal tiled file format, based on TIFF, designed to enable interactive panning and zooming of extremely large images, especially over the World Wide Web and other Internet services.
 
@@ -108,15 +105,6 @@ TIFF_Tag Software, 305<sub>10</sub> (0131<sub>16</sub>), if present, contains th
 | 1 - 15 | [Objective Pathology Services](http://www.objectivepathology.com) | (reserved) |
 | 16 - 23 | [Zoomify](http://www.zoomify.com) | (reserved) |
 | 24 - 39 | [Huron Digital Pathology](http://hurondigitalpathology.com) | (reserved) |
-
-## Image Viewers
-In future, open-source browser-based image viewers will be available here for collaborative development:
-* Full viewer in JavaScript/CoffeeScript, with S3.js
-* Leaflet/Mapbox plugin
-* Google Maps plugin
-* OpenLayers 3 plugin
-* Modest Maps plugin
-* Polymaps plugin
 
 ## BigTIFF Resources
 
