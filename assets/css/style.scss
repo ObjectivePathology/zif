@@ -1,7 +1,21 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,600,600i');
+// @import url('https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,600,600i');
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url('/NotoSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url('/NotoSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 @font-face {
     font-family: "Core Sans A";
@@ -83,7 +97,7 @@ body {
   width: 80%;
   max-width: 1280px;
   font-size: 20px; // can scale this in vw, vh units later
-  font-weight: 300;
+  //font-weight: 300;
   line-height: 28px;
 }
 
