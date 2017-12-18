@@ -25,6 +25,22 @@
 }
 
 @font-face {
+    font-family: "Aguda";
+    src: url('/Aguda_regular.woff2') format('woff2'),
+         url('/Aguda_regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Aguda";
+    src: url('/Aguda_bold.woff2') format('woff2'),
+         url('/Aguda_bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "Core Sans A";
     src: url('/CoreSansA45.woff2') format('woff2'),
          url('/CoreSansA45.woff') format('woff');
@@ -83,7 +99,7 @@
 
 
 $serif      : Georgia, Times, serif;
-$sans-serif : "Noto Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
+$sans-serif : "Aguda", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
 $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
 $link-color : #2266AA;
@@ -114,7 +130,7 @@ body {
 
 .main-content h2 {
   color: #3399FF;
-  font-weight: 500;
+  //font-weight: 500;
 }
 
 .main-content h3 {
