@@ -91,6 +91,7 @@ $link-color : #2266AA;
 @import "{{ site.theme }}";
 
 body {
+  width: 100%;
   font-family: $sans-serif;
   color: #333333;
 }
@@ -101,8 +102,8 @@ body {
 
 .main-content {
   min-width: 640px;
-  //width: 80%;
-  width: calc(640px + 50vw);
+  width: 80%;
+  //width: calc(640px + 50vw);
   //max-width: 80%;
   font-size: 18px;
   line-height: 1.5;
@@ -121,15 +122,15 @@ body {
   font-family: "Publica Play";
   font-size: 24px;
   font-weight: normal;
-  line-height: 1.25;
+  line-height: 1.125;
 }
 
 .main-content h3 {
   color: #2266AA;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   font-style: italic;
-  line-height: 1.25;
+  line-height: 1;
 }
 
 .main-content img {
