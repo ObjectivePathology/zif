@@ -86,7 +86,7 @@ $serif      : Georgia, Times, serif;
 $sans-serif : "Core Sans NR", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, Arial, sans-serif;
 $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
-$link-color : #2266AA;
+//$link-color : #2266AA;
 
 @import "{{ site.theme }}";
 
@@ -97,7 +97,7 @@ body {
 }
 
 a {
-    color: purple;
+    color: #2266AA;
     &:hover {
         color: #3399FF;
     }
