@@ -96,6 +96,13 @@ body {
   color: #333333;
 }
 
+a {
+    color: purple;
+    &:hover {
+        color: #3399FF;
+    }
+}
+
 .page-header {
   display: none;
 }
