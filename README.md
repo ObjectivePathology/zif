@@ -1,9 +1,9 @@
 <img src="ZIF.svg" width="216" height="126">
 
-# The Zoomable Image File Format
-# Zoomable Image File Format
-# Tagged Image File Format
-# The Tagged Image<wbr>File Format
+# The Zoomable Image <wbr> File Format
+# Zoomable Image <wbr> File Format
+# Tagged Image <wbr> File Format
+# The Tagged Image <wbr> File Format
 
 **ZIF**, the **Zoomable Image File format**, alternatively also known as the **Zoomify Image File format**, is an open-source, web-friendly, multi-resolution, pyramidal tiled file format, based on TIFF, designed to enable interactive panning and zooming of extremely large images, especially over the World Wide Web and other Internet services.
 
