@@ -13,7 +13,7 @@ The format was conceived and prototyped in 2012 by [**Objective Pathology Servic
 ZIF is organized into two functional levels: Baseline and Advanced. Baseline is intended for easy implementation and wide compatibility, while Advanced takes inspiration from the more comprehensive TIFF Extensions subset to allow SubIFDs, simultaneous zoomable, focusable, and time-series data, and more advanced codecs. All forms of ZIF can be read and written with [**libTIFF**](http:/libtiff.maptools.org)&nbsp;v.4.0 and later, and other libraries supporting BigTIFF.
 
 ## Why is there no "standard" TIFF 6.0 support in ZIF?
-Since all zoomable images require tiles, many zoomable images are larger than the 64K&nbsp;&#10005;&nbsp;64K pixels, 4&nbsp;GB TIFF&nbsp;6.0 limits, and since for browser interoperability either JPEG or PNG codecs unsupported by baseline TIFF are required, even with a 32-bit TIFF&nbsp;6.0 Part&nbsp;2 zooming implementation almost no existing software could read or write most images anyway; so to keep ZIF implementations simple and future-focused, only BigTIFF containers are permitted.
+Since all zoomable images require tiles, many zoomable images are larger than the 64K&nbsp;&#10005;&nbsp;64K pixels, 4&nbsp;GB TIFF&nbsp;6.0 limits, and since for browser interoperability either JPEG or PNG codecs unsupported by baseline TIFF are required, even with a 32-bit TIFF&nbsp;6.0 Part&nbsp;2 zooming implementation almost no existing software could read or write most images anyway; so to keep ZIF implementations simple and future-focused, only BigTIFF containers are permitted, and edge tiles are clipped rather than extended to match common zoomable image viewers such as OpenSeadragon (DZI), OpenLayers, and Deck.gl. Note: many viewer require padded edges, such as Mapbox GL, Leaflet, and others - for these, use of a tile server such as Objective IMS is recommended.
 
 ##  Common Specifications, Baseline and Advanced
 - no strips/rasters, planar configuration, alpha channel, higher bit depths, etc. ZIF Baseline is intended only for common, monitor-displayable images, 8-bit, monochrome or RGB.
@@ -21,6 +21,7 @@ Since all zoomable images require tiles, many zoomable images are larger than th
 - Version 002B<sub>16</sub> for BigTIFF only, never TIFF&nbsp;6.0 002A<sub>16</sub>
 - Image Directory IFD&nbsp;1 is the whole base image, always interleaved and tiled
 - Tile size must be a multiple of 16 as per the TIFF&nbsp;6.0 specification Section&nbsp;15. Square tiles of 512&nbsp;&#10005;&nbsp;512 pixels are highly recommended, but not mandatory.
+- Right and bottom edges must be clipped, not padded to multiples of tile size
 
 | Zoomable | Z-stack<br>/ Focal | Time<br>Series | Baseline | Advanced |
 | :---: | :---: | :---: | :---: | :---: |
