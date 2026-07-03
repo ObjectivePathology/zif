@@ -1,0 +1,6 @@
+Contact: mailto:network@objectivepathology.com
+Contact: mailto:support@objectivepathology.com
+Expires: 2027-12-31T17:59:00.000Z
+Canonical: https://pathology.network/.well-known/security.txt
+Policy: https://objectivepathology.com/security-policy
+Preferred-Languages: en
